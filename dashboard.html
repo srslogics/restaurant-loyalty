@@ -13,137 +13,152 @@
     <link rel="stylesheet" href="./src/styles.css" />
   </head>
   <body data-page="dashboard">
-    <div class="page-shell">
-      <header class="topbar">
-        <a class="brand-lockup brand-link" href="./index.html">
+    <div class="app-layout">
+      <aside class="sidebar">
+        <a class="brand-link" href="./index.html">
           <div class="brand-mark">TM</div>
           <div>
             <p class="eyebrow">Restaurant loyalty software</p>
-            <h1>TableMint Loyalty OS</h1>
+            <h2>TableMint Loyalty OS</h2>
           </div>
         </a>
-        <nav class="topnav">
-          <a href="./index.html" data-nav="home">Home</a>
-          <a href="./dashboard.html" data-nav="dashboard">Dashboard</a>
-          <a href="./customers.html" data-nav="customers">Customers</a>
-          <a href="./rewards.html" data-nav="rewards">Rewards</a>
-          <a href="./campaigns.html" data-nav="campaigns">Campaigns</a>
-          <a href="./counter.html" data-nav="counter">Counter</a>
-          <a href="./branches.html" data-nav="branches">Branches</a>
-        </nav>
-      </header>
-
-      <main class="app-page">
-        <section class="page-intro">
-          <div>
-            <p class="section-kicker">Owner Dashboard</p>
-            <h2>Track loyalty-led growth across all outlets.</h2>
+        <nav class="sidebar-nav">
+          <div class="nav-group">
+            <p class="nav-section-title">Overview</p>
+            <div class="nav-links">
+              <a class="nav-link" href="./index.html" data-nav="home"><span>Executive View</span><span>01</span></a>
+              <a class="nav-link" href="./dashboard.html" data-nav="dashboard"><span>Dashboard</span><span>02</span></a>
+            </div>
           </div>
-          <a class="secondary-btn" href="./customers.html">Open customer CRM</a>
-        </section>
-
-        <section class="stat-strip four">
-          <article class="stat-card accent">
-            <p>Total members</p>
-            <strong>18,420</strong>
-            <span>+186 this week</span>
-          </article>
-          <article class="stat-card">
-            <p>Repeat revenue</p>
-            <strong>₹4.8L</strong>
-            <span>31% of total sales</span>
-          </article>
-          <article class="stat-card">
-            <p>Rewards redeemed</p>
-            <strong>1,264</strong>
-            <span>Top reward: free dessert</span>
-          </article>
-          <article class="stat-card">
-            <p>At-risk guests</p>
-            <strong>932</strong>
-            <span>Need win-back campaign</span>
-          </article>
-        </section>
-
-        <section class="insight-grid">
-          <article class="chart-card">
-            <div class="stream-head">
-              <p>Branch performance</p>
-              <span class="muted">Repeat guest share</span>
+          <div class="nav-group">
+            <p class="nav-section-title">Operations</p>
+            <div class="nav-links">
+              <a class="nav-link" href="./customers.html" data-nav="customers"><span>Customers</span><span>CRM</span></a>
+              <a class="nav-link" href="./counter.html" data-nav="counter"><span>Counter</span><span>POS</span></a>
+              <a class="nav-link" href="./branches.html" data-nav="branches"><span>Branches</span><span>Ops</span></a>
             </div>
-            <div class="bars">
-              <div><span>Wardha Road</span><i style="width: 84%"></i><b>84%</b></div>
-              <div><span>Dharampeth</span><i style="width: 72%"></i><b>72%</b></div>
-              <div><span>Manish Nagar</span><i style="width: 68%"></i><b>68%</b></div>
-              <div><span>Sadar</span><i style="width: 64%"></i><b>64%</b></div>
+          </div>
+          <div class="nav-group">
+            <p class="nav-section-title">Growth</p>
+            <div class="nav-links">
+              <a class="nav-link" href="./rewards.html" data-nav="rewards"><span>Rewards</span><span>Rules</span></a>
+              <a class="nav-link" href="./campaigns.html" data-nav="campaigns"><span>Campaigns</span><span>ROI</span></a>
             </div>
-          </article>
+          </div>
+        </nav>
+      </aside>
 
-          <article class="chart-card">
-            <div class="stream-head">
-              <p>Recent activity</p>
-              <button id="rotateActivity">Refresh</button>
-            </div>
-            <ul id="activityList"></ul>
-          </article>
-        </section>
+      <div class="workspace">
+        <header class="workspace-header">
+          <div class="header-search">Search reports, guests, branch alerts</div>
+          <div class="header-actions">
+            <div class="header-pill">Last sync 2 mins ago</div>
+            <div class="header-profile"><div class="avatar">SR</div><div><strong>Owner Console</strong><p class="meta-text">Head office</p></div></div>
+          </div>
+        </header>
 
-        <section class="platform-grid">
-          <article class="feature-panel">
-            <p class="panel-label">Retention insight</p>
-            <h3>214 couples and 153 families are ready for a win-back push.</h3>
-            <p>Use targeted campaigns before the next weekend cycle starts.</p>
-          </article>
-          <article class="feature-panel">
-            <p class="panel-label">Branch alert</p>
-            <h3>Sadar redemptions are rising faster than visits this month.</h3>
-            <p>Check coupon quality and floor manager training for misuse.</p>
-          </article>
-          <article class="feature-panel">
-            <p class="panel-label">Growth idea</p>
-            <h3>Midweek traffic can improve with a Tuesday double-points plan.</h3>
-            <p>Move to rewards studio to launch it across selected branches.</p>
-          </article>
-        </section>
+        <main class="workspace-main">
+          <section class="page-header">
+            <div class="page-title">
+              <p class="section-kicker">Dashboard</p>
+              <h1>Track loyalty-led growth across all outlets.</h1>
+              <p class="muted-copy">This screen is designed like a real operating dashboard: it highlights revenue, retention, branch performance, and action-ready alerts without overwhelming the owner.</p>
+            </div>
+            <div class="page-actions">
+              <a class="primary-btn" href="./campaigns.html">Launch campaign</a>
+              <a class="secondary-btn" href="./customers.html">Open customer CRM</a>
+            </div>
+          </section>
 
-        <section class="dual-grid">
-          <article class="table-card">
-            <div class="stream-head">
-              <p>Quick actions</p>
-              <span class="muted">Most-used owner tasks</span>
-            </div>
-            <div class="action-grid">
-              <a class="mini-action" href="./campaigns.html">Launch win-back campaign</a>
-              <a class="mini-action" href="./rewards.html">Edit point rules</a>
-              <a class="mini-action" href="./customers.html">Open VIP customers</a>
-              <a class="mini-action" href="./branches.html">Review branch issues</a>
-            </div>
-          </article>
+          <section class="kpi-grid">
+            <article class="kpi-card emphasis"><p class="panel-label">Total members</p><strong>18,420</strong><p class="panel-copy">+186 new enrollments this week</p></article>
+            <article class="kpi-card"><p class="panel-label">Repeat revenue</p><strong>₹4.8L</strong><p class="panel-copy">31% of total monthly sales</p></article>
+            <article class="kpi-card"><p class="panel-label">Rewards redeemed</p><strong>1,264</strong><p class="panel-copy">Top reward: free dessert</p></article>
+            <article class="kpi-card"><p class="panel-label">At-risk guests</p><strong>932</strong><p class="panel-copy">Ready for win-back campaign</p></article>
+          </section>
 
-          <article class="table-card">
-            <div class="stream-head">
-              <p>Upcoming campaign calendar</p>
-              <span class="muted">Next 7 days</span>
-            </div>
-            <div class="timeline-stack">
-              <div class="timeline-item">
-                <strong>Tuesday</strong>
-                <span>Double points for lunch guests at Dharampeth and Wardha Road</span>
+          <section class="split-grid">
+            <article class="chart-card">
+              <div class="stream-head">
+                <div>
+                  <p class="panel-label">Branch performance</p>
+                  <h3>Repeat guest share by branch</h3>
+                </div>
+                <span class="badge success">Healthy network</span>
               </div>
-              <div class="timeline-item">
-                <strong>Friday</strong>
-                <span>Family dinner bundle coupon sent to 420 premium members</span>
+              <div class="bars">
+                <div><span>Wardha Road</span><i style="width: 84%"></i><b>84%</b></div>
+                <div><span>Dharampeth</span><i style="width: 72%"></i><b>72%</b></div>
+                <div><span>Manish Nagar</span><i style="width: 68%"></i><b>68%</b></div>
+                <div><span>Sadar</span><i style="width: 64%"></i><b>64%</b></div>
               </div>
-              <div class="timeline-item">
-                <strong>Sunday</strong>
-                <span>Birthday reward automation scheduled for 36 upcoming birthdays</span>
+            </article>
+
+            <article class="chart-card">
+              <div class="stream-head">
+                <div>
+                  <p class="panel-label">Recent activity</p>
+                  <h3>Live loyalty events</h3>
+                </div>
+                <button id="rotateActivity" type="button">Refresh</button>
               </div>
-            </div>
-          </article>
-        </section>
-      </main>
+              <ul class="activity-list" id="activityList"></ul>
+            </article>
+          </section>
+
+          <section class="three-grid">
+            <article class="feature-card">
+              <p class="panel-label">Retention insight</p>
+              <h3>214 couples and 153 family diners are good win-back targets.</h3>
+              <p class="panel-copy">Trigger a dinner-value offer instead of a full-menu discount to preserve margins.</p>
+            </article>
+            <article class="feature-card">
+              <p class="panel-label">Branch alert</p>
+              <h3>Sadar redemptions are growing faster than visits this month.</h3>
+              <p class="panel-copy">A professional tool should surface this early so the owner can review branch discipline.</p>
+            </article>
+            <article class="feature-card">
+              <p class="panel-label">Growth opportunity</p>
+              <h3>Lunch traffic can improve with Tuesday and Wednesday point boosts.</h3>
+              <p class="panel-copy">Branch-aware weekday campaigns are a strong upsell in the client conversation.</p>
+            </article>
+          </section>
+
+          <section class="split-grid">
+            <article class="table-card">
+              <div class="stream-head">
+                <div>
+                  <p class="panel-label">Quick actions</p>
+                  <h3>Frequent owner tasks</h3>
+                </div>
+                <span class="badge">High-value workflow</span>
+              </div>
+              <div class="action-grid">
+                <a class="mini-action" href="./campaigns.html"><strong>Launch win-back campaign</strong><span class="list-detail">Target inactive guests by spend</span></a>
+                <a class="mini-action" href="./rewards.html"><strong>Edit point rules</strong><span class="list-detail">Adjust earning and redemption logic</span></a>
+                <a class="mini-action" href="./customers.html"><strong>Review VIP guests</strong><span class="list-detail">See high-spend loyalty members</span></a>
+                <a class="mini-action" href="./branches.html"><strong>Compare branches</strong><span class="list-detail">Spot weak operational execution</span></a>
+              </div>
+            </article>
+
+            <article class="table-card">
+              <div class="stream-head">
+                <div>
+                  <p class="panel-label">Campaign calendar</p>
+                  <h3>Next 7 days</h3>
+                </div>
+                <span class="badge warning">3 campaigns queued</span>
+              </div>
+              <div class="timeline-stack">
+                <div class="timeline-item"><strong>Tuesday</strong><span>Double points for lunch guests at Dharampeth and Wardha Road</span></div>
+                <div class="timeline-item"><strong>Friday</strong><span>Family dinner coupon sent to 420 premium members</span></div>
+                <div class="timeline-item"><strong>Sunday</strong><span>Birthday reward automation scheduled for 36 upcoming birthdays</span></div>
+              </div>
+            </article>
+          </section>
+        </main>
+      </div>
     </div>
-
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>

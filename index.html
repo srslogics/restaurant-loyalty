@@ -6,7 +6,7 @@
     <title>TableMint Loyalty OS</title>
     <meta
       name="description"
-      content="Multi-page frontend for a restaurant chain loyalty platform."
+      content="Professional multi-branch restaurant loyalty software demo."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,154 +17,187 @@
     <link rel="stylesheet" href="./src/styles.css" />
   </head>
   <body data-page="home">
-    <div class="page-shell">
-      <header class="topbar">
-        <a class="brand-lockup brand-link" href="./index.html">
+    <div class="app-layout">
+      <aside class="sidebar">
+        <a class="brand-link" href="./index.html">
           <div class="brand-mark">TM</div>
           <div>
             <p class="eyebrow">Restaurant loyalty software</p>
-            <h1>TableMint Loyalty OS</h1>
+            <h2>TableMint Loyalty OS</h2>
           </div>
         </a>
-        <nav class="topnav">
-          <a href="./index.html" data-nav="home">Home</a>
-          <a href="./dashboard.html" data-nav="dashboard">Dashboard</a>
-          <a href="./customers.html" data-nav="customers">Customers</a>
-          <a href="./rewards.html" data-nav="rewards">Rewards</a>
-          <a href="./campaigns.html" data-nav="campaigns">Campaigns</a>
-          <a href="./counter.html" data-nav="counter">Counter</a>
-          <a href="./branches.html" data-nav="branches">Branches</a>
+
+        <nav class="sidebar-nav">
+          <div class="nav-group">
+            <p class="nav-section-title">Overview</p>
+            <div class="nav-links">
+              <a class="nav-link" href="./index.html" data-nav="home"><span>Executive View</span><span>01</span></a>
+              <a class="nav-link" href="./dashboard.html" data-nav="dashboard"><span>Dashboard</span><span>02</span></a>
+            </div>
+          </div>
+          <div class="nav-group">
+            <p class="nav-section-title">Operations</p>
+            <div class="nav-links">
+              <a class="nav-link" href="./customers.html" data-nav="customers"><span>Customers</span><span>CRM</span></a>
+              <a class="nav-link" href="./counter.html" data-nav="counter"><span>Counter</span><span>POS</span></a>
+              <a class="nav-link" href="./branches.html" data-nav="branches"><span>Branches</span><span>Ops</span></a>
+            </div>
+          </div>
+          <div class="nav-group">
+            <p class="nav-section-title">Growth</p>
+            <div class="nav-links">
+              <a class="nav-link" href="./rewards.html" data-nav="rewards"><span>Rewards</span><span>Rules</span></a>
+              <a class="nav-link" href="./campaigns.html" data-nav="campaigns"><span>Campaigns</span><span>ROI</span></a>
+            </div>
+          </div>
         </nav>
-      </header>
 
-      <main>
-        <section class="hero">
-          <div class="hero-copy">
-            <p class="section-kicker">Built for a 7-restaurant group in Nagpur</p>
-            <h2>One loyalty system for every branch, guest, reward, and repeat visit.</h2>
-            <p class="hero-text">
-              This is now a multi-page frontend foundation. The owner gets a clear
-              overview, branch teams get a fast workflow, and customers get a
-              connected reward experience across all outlets.
-            </p>
-            <div class="cta-row">
-              <a class="primary-btn" href="./dashboard.html">Open dashboard</a>
-              <a class="secondary-btn" href="./counter.html">Open counter view</a>
-            </div>
-
-            <div class="hero-metrics">
-              <article>
-                <span>7</span>
-                <p>Branches under one account</p>
-              </article>
-              <article>
-                <span>18k+</span>
-                <p>Unified guest profiles</p>
-              </article>
-              <article>
-                <span>31%</span>
-                <p>Sales from repeat guests</p>
-              </article>
-            </div>
+        <div class="sidebar-card">
+          <p class="small-label">Why this demo works</p>
+          <strong>Built to sell the owner on revenue, control, and rollout confidence.</strong>
+          <p>It shows head-office reporting, staff workflow, branch governance, and growth campaigns in one connected product story.</p>
+          <div class="sidebar-chip-row">
+            <span class="sidebar-chip">7 branches</span>
+            <span class="sidebar-chip">Phone-based loyalty</span>
           </div>
+        </div>
+      </aside>
 
-          <div class="hero-panel">
-            <div class="panel-glow"></div>
-            <div class="panel-header">
+      <div class="workspace">
+        <header class="workspace-header">
+          <div class="header-search">Search customers, branches, campaigns</div>
+          <div class="header-actions">
+            <div class="header-pill">Demo environment</div>
+            <div class="header-profile">
+              <div class="avatar">SR</div>
               <div>
-                <p class="panel-label">At a glance</p>
-                <h3>What this software covers</h3>
+                <strong>Owner Console</strong>
+                <p class="meta-text">Nagpur restaurant group</p>
               </div>
-              <span class="status-pill">Frontend ready</span>
-            </div>
-            <div class="stats-grid">
-              <article class="stat-card accent">
-                <p>Owner dashboard</p>
-                <strong>Live</strong>
-                <span>Sales, loyalty, inactive guests</span>
-              </article>
-              <article class="stat-card">
-                <p>Customer CRM</p>
-                <strong>Shared</strong>
-                <span>Phone-based profile across branches</span>
-              </article>
-              <article class="stat-card">
-                <p>Reward engine</p>
-                <strong>Flexible</strong>
-                <span>Points, tiers, birthday, weekday boosts</span>
-              </article>
-              <article class="stat-card">
-                <p>Branch control</p>
-                <strong>Secure</strong>
-                <span>Cashier, manager, owner roles</span>
-              </article>
             </div>
           </div>
-        </section>
+        </header>
 
-        <section>
-          <div class="section-heading">
-            <p class="section-kicker">App Structure</p>
-            <h2>Separate pages for the core workflows.</h2>
-          </div>
-          <div class="platform-grid">
-            <a class="feature-panel feature-link" href="./dashboard.html">
+        <main class="workspace-main">
+          <section class="page-header">
+            <div class="page-title">
+              <p class="section-kicker">Executive Overview</p>
+              <h1>One loyalty platform for every branch, every guest, and every repeat visit.</h1>
+              <p class="muted-copy">
+                Designed like a real software product, this demo shows how the owner manages customer retention, how staff use it at the counter, and how campaigns drive repeat sales across all 7 restaurants.
+              </p>
+            </div>
+            <div class="page-actions">
+              <a class="primary-btn" href="./dashboard.html">Open dashboard</a>
+              <a class="secondary-btn" href="./counter.html">View counter flow</a>
+            </div>
+          </section>
+
+          <section class="hero">
+            <article class="hero-card">
+              <div class="hero-copy">
+                <p class="section-kicker">Built for a multi-outlet group</p>
+                <h2>Warm, premium, and operational from day one.</h2>
+                <p class="hero-text">
+                  The software gives management a single loyalty brain across branches while keeping branch teams on a fast, simple workflow that works during live billing.
+                </p>
+              </div>
+              <div class="cta-row">
+                <a class="primary-btn" href="./rewards.html">Open rewards studio</a>
+                <a class="secondary-btn" href="./campaigns.html">Review campaigns</a>
+              </div>
+              <div class="hero-metrics">
+                <article class="hero-metric">
+                  <strong>18.4k</strong>
+                  <p>Guest records under one wallet</p>
+                </article>
+                <article class="hero-metric">
+                  <strong>31%</strong>
+                  <p>Sales from repeat guests</p>
+                </article>
+                <article class="hero-metric">
+                  <strong>1,264</strong>
+                  <p>Rewards redeemed this month</p>
+                </article>
+                <article class="hero-metric">
+                  <strong>932</strong>
+                  <p>Guests ready for win-back</p>
+                </article>
+              </div>
+            </article>
+
+            <article class="hero-card hero-visual">
+              <div class="panel-glow"></div>
+              <div class="panel-head">
+                <div>
+                  <p class="panel-label">Leadership snapshot</p>
+                  <h3>What the owner sees immediately</h3>
+                </div>
+                <span class="status-pill">System healthy</span>
+              </div>
+              <div class="mini-list">
+                <div class="mini-list-item">
+                  <strong>Centralized loyalty rules</strong>
+                  <span class="list-detail">One points engine with branch-level overrides when needed</span>
+                </div>
+                <div class="mini-list-item">
+                  <strong>Branch accountability</strong>
+                  <span class="list-detail">Track enrollments, reward usage, and staff behavior by outlet</span>
+                </div>
+                <div class="mini-list-item">
+                  <strong>Campaign ROI</strong>
+                  <span class="list-detail">See which birthday, weekday, and win-back offers produce actual repeat revenue</span>
+                </div>
+                <div class="mini-list-item">
+                  <strong>Fast rollout</strong>
+                  <span class="list-detail">Phone-number based loyalty means no mobile app is required for launch</span>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="kpi-grid">
+            <article class="kpi-card emphasis">
+              <p class="panel-label">Owner control</p>
+              <strong>Central</strong>
+              <p class="panel-copy">All branches follow one program with permissions for cashier, manager, and owner roles.</p>
+            </article>
+            <article class="kpi-card">
+              <p class="panel-label">Guest experience</p>
+              <strong>Unified</strong>
+              <p class="panel-copy">Guests earn at one branch and redeem at another without friction or account duplication.</p>
+            </article>
+            <article class="kpi-card">
+              <p class="panel-label">Campaign engine</p>
+              <strong>Targeted</strong>
+              <p class="panel-copy">Run offers by segment, branch, day of week, inactivity, birthday, or spend tier.</p>
+            </article>
+            <article class="kpi-card">
+              <p class="panel-label">Staff adoption</p>
+              <strong>Simple</strong>
+              <p class="panel-copy">Counter flow is fast enough for busy service windows, so rollout feels realistic.</p>
+            </article>
+          </section>
+
+          <section class="feature-grid">
+            <a class="feature-card" href="./dashboard.html">
               <p class="panel-label">Dashboard</p>
-              <h3>Owner view for revenue, redemptions, and branch performance.</h3>
-              <p>Start here for the main control room.</p>
+              <h3>Management reporting that feels credible in front of a client.</h3>
+              <p class="panel-copy">KPIs, alerts, campaign calendar, and branch-level revenue signals.</p>
             </a>
-            <a class="feature-panel feature-link" href="./customers.html">
+            <a class="feature-card" href="./customers.html">
               <p class="panel-label">Customers</p>
-              <h3>Profiles, points balances, visit history, and segmentation.</h3>
-              <p>Designed for quick lookup and retention actions.</p>
+              <h3>A usable CRM for profile lookup, segmenting, and retention actions.</h3>
+              <p class="panel-copy">VIP flags, visit history, spend signals, and suggested next actions.</p>
             </a>
-            <a class="feature-panel feature-link" href="./rewards.html">
-              <p class="panel-label">Rewards</p>
-              <h3>Campaigns, coupons, point rules, and tier benefits.</h3>
-              <p>Built for marketing flexibility without complexity.</p>
-            </a>
-            <a class="feature-panel feature-link" href="./campaigns.html">
-              <p class="panel-label">Campaigns</p>
-              <h3>Plan broadcasts, win-back flows, and festive launches.</h3>
-              <p>Shows the client how promotions actually get executed.</p>
-            </a>
-            <a class="feature-panel feature-link" href="./counter.html">
+            <a class="feature-card" href="./counter.html">
               <p class="panel-label">Counter</p>
-              <h3>Staff-side earn and redeem screen for real billing moments.</h3>
-              <p>Makes the software feel operational, not only analytical.</p>
+              <h3>Shows this is not just a concept deck but an actual operating tool.</h3>
+              <p class="panel-copy">Staff can search a guest, apply reward, and credit points during billing.</p>
             </a>
-            <a class="feature-panel feature-link" href="./branches.html">
-              <p class="panel-label">Branches</p>
-              <h3>Outlet-wise health, staff activity, and local performance.</h3>
-              <p>Useful for managing chain operations branch by branch.</p>
-            </a>
-          </div>
-        </section>
-
-        <section>
-          <div class="section-heading">
-            <p class="section-kicker">Why it sells</p>
-            <h2>Show the owner money, control, and growth in one story.</h2>
-          </div>
-          <div class="platform-grid">
-            <article class="feature-panel">
-              <p class="panel-label">Revenue angle</p>
-              <h3>Increase repeat visits without depending only on food delivery apps.</h3>
-              <p>Own the customer database and bring guests back directly.</p>
-            </article>
-            <article class="feature-panel">
-              <p class="panel-label">Operations angle</p>
-              <h3>Every branch follows the same loyalty rules with central control.</h3>
-              <p>Less confusion for staff, fewer reward misuse problems.</p>
-            </article>
-            <article class="feature-panel">
-              <p class="panel-label">Marketing angle</p>
-              <h3>Birthday, VIP, and inactive-customer campaigns can run in minutes.</h3>
-              <p>That makes the demo feel like a sales machine, not just software.</p>
-            </article>
-          </div>
-        </section>
-      </main>
+          </section>
+        </main>
+      </div>
     </div>
 
     <script type="module" src="./src/main.js"></script>

@@ -13,82 +13,63 @@
     <link rel="stylesheet" href="./src/styles.css" />
   </head>
   <body data-page="campaigns">
-    <div class="page-shell">
-      <header class="topbar">
-        <a class="brand-lockup brand-link" href="./index.html">
-          <div class="brand-mark">TM</div>
-          <div>
-            <p class="eyebrow">Restaurant loyalty software</p>
-            <h1>TableMint Loyalty OS</h1>
-          </div>
-        </a>
-        <nav class="topnav">
-          <a href="./index.html" data-nav="home">Home</a>
-          <a href="./dashboard.html" data-nav="dashboard">Dashboard</a>
-          <a href="./customers.html" data-nav="customers">Customers</a>
-          <a href="./rewards.html" data-nav="rewards">Rewards</a>
-          <a href="./campaigns.html" data-nav="campaigns">Campaigns</a>
-          <a href="./counter.html" data-nav="counter">Counter</a>
-          <a href="./branches.html" data-nav="branches">Branches</a>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <a class="brand-link" href="./index.html"><div class="brand-mark">TM</div><div><p class="eyebrow">Restaurant loyalty software</p><h2>TableMint Loyalty OS</h2></div></a>
+        <nav class="sidebar-nav">
+          <div class="nav-group"><p class="nav-section-title">Overview</p><div class="nav-links"><a class="nav-link" href="./index.html" data-nav="home"><span>Executive View</span><span>01</span></a><a class="nav-link" href="./dashboard.html" data-nav="dashboard"><span>Dashboard</span><span>02</span></a></div></div>
+          <div class="nav-group"><p class="nav-section-title">Operations</p><div class="nav-links"><a class="nav-link" href="./customers.html" data-nav="customers"><span>Customers</span><span>CRM</span></a><a class="nav-link" href="./counter.html" data-nav="counter"><span>Counter</span><span>POS</span></a><a class="nav-link" href="./branches.html" data-nav="branches"><span>Branches</span><span>Ops</span></a></div></div>
+          <div class="nav-group"><p class="nav-section-title">Growth</p><div class="nav-links"><a class="nav-link" href="./rewards.html" data-nav="rewards"><span>Rewards</span><span>Rules</span></a><a class="nav-link" href="./campaigns.html" data-nav="campaigns"><span>Campaigns</span><span>ROI</span></a></div></div>
         </nav>
-      </header>
+      </aside>
 
-      <main class="app-page">
-        <section class="page-intro">
-          <div>
-            <p class="section-kicker">Campaign Center</p>
-            <h2>Launch offers like a growth team, not with ad-hoc WhatsApp messages.</h2>
-          </div>
-          <a class="secondary-btn" href="./dashboard.html">Back to dashboard</a>
-        </section>
+      <div class="workspace">
+        <header class="workspace-header">
+          <div class="header-search">Search campaign name, segment, branch, conversion</div>
+          <div class="header-actions"><div class="header-pill">Marketing mode</div><div class="header-profile"><div class="avatar">CM</div><div><strong>Campaign Center</strong><p class="meta-text">Retention marketing</p></div></div></div>
+        </header>
 
-        <section class="dual-grid">
-          <article class="table-card">
-            <div class="stream-head">
-              <p>Live campaigns</p>
-              <span class="muted">Running now</span>
+        <main class="workspace-main">
+          <section class="page-header">
+            <div class="page-title">
+              <p class="section-kicker">Campaign Center</p>
+              <h1>Run growth campaigns like a professional restaurant group.</h1>
+              <p class="muted-copy">This page turns the demo from “points software” into a revenue platform by showing how offers are launched, targeted, and measured.</p>
             </div>
-            <div class="template-list">
-              <div><strong>Tuesday lunch booster</strong><span>2x points • Dharampeth, Wardha Road</span></div>
-              <div><strong>Birthday delight</strong><span>Free dessert • 36 recipients this week</span></div>
-              <div><strong>Win-back diners</strong><span>₹250 off above ₹1,500 • 932 inactive guests</span></div>
+            <div class="page-actions">
+              <a class="primary-btn" href="./rewards.html">Create from template</a>
+              <a class="secondary-btn" href="./dashboard.html">Back to dashboard</a>
             </div>
-          </article>
+          </section>
 
-          <article class="table-card">
-            <div class="stream-head">
-              <p>Performance snapshot</p>
-              <span class="muted">Last 30 days</span>
-            </div>
-            <div class="action-grid">
-              <div class="mini-action stat-box"><strong>18.4%</strong><span>Offer conversion</span></div>
-              <div class="mini-action stat-box"><strong>₹2.1L</strong><span>Revenue influenced</span></div>
-              <div class="mini-action stat-box"><strong>1,126</strong><span>Coupons claimed</span></div>
-              <div class="mini-action stat-box"><strong>412</strong><span>Guests reactivated</span></div>
-            </div>
-          </article>
-        </section>
+          <section class="split-grid">
+            <article class="table-card">
+              <div class="stream-head"><div><p class="panel-label">Live campaigns</p><h3>Running right now</h3></div><span class="badge success">3 active</span></div>
+              <div class="template-list">
+                <div><strong>Tuesday lunch booster</strong><span>2x points at Dharampeth and Wardha Road</span></div>
+                <div><strong>Birthday delight</strong><span>Free dessert for 36 guests this week</span></div>
+                <div><strong>Win-back diners</strong><span>₹250 off above ₹1,500 for 932 inactive guests</span></div>
+              </div>
+            </article>
+            <article class="table-card">
+              <div class="stream-head"><div><p class="panel-label">Performance snapshot</p><h3>30-day results</h3></div><span class="badge">ROI overview</span></div>
+              <div class="action-grid">
+                <div class="stat-box"><strong>18.4%</strong><span class="list-detail">Offer conversion</span></div>
+                <div class="stat-box"><strong>₹2.1L</strong><span class="list-detail">Revenue influenced</span></div>
+                <div class="stat-box"><strong>1,126</strong><span class="list-detail">Coupons claimed</span></div>
+                <div class="stat-box"><strong>412</strong><span class="list-detail">Guests reactivated</span></div>
+              </div>
+            </article>
+          </section>
 
-        <section class="platform-grid">
-          <article class="feature-panel">
-            <p class="panel-label">Use case 1</p>
-            <h3>Bring back customers who have not visited in 30 days.</h3>
-            <p>Send a limited-time dinner coupon only to inactive members with decent previous spend.</p>
-          </article>
-          <article class="feature-panel">
-            <p class="panel-label">Use case 2</p>
-            <h3>Fill slow weekdays without discounting everyone.</h3>
-            <p>Use double points for lunch regulars instead of broad flat discounts.</p>
-          </article>
-          <article class="feature-panel">
-            <p class="panel-label">Use case 3</p>
-            <h3>Reward premium families and upsell special occasions.</h3>
-            <p>Target high-value guests with celebration bundles and birthday offers.</p>
-          </article>
-        </section>
-      </main>
+          <section class="three-grid">
+            <article class="feature-card"><p class="panel-label">Use case 1</p><h3>Bring back customers who have not visited in 30 days.</h3><p class="panel-copy">Use time-limited dinner offers only for guests with historically healthy spend.</p></article>
+            <article class="feature-card"><p class="panel-label">Use case 2</p><h3>Fill slow weekdays without discounting everyone.</h3><p class="panel-copy">Use points multipliers for targeted segments instead of broad percentage-off deals.</p></article>
+            <article class="feature-card"><p class="panel-label">Use case 3</p><h3>Reward premium families and upsell special occasions.</h3><p class="panel-copy">Send tailored celebration and birthday incentives to top-value diners.</p></article>
+          </section>
+        </main>
+      </div>
     </div>
-
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>

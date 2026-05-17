@@ -13,96 +13,70 @@
     <link rel="stylesheet" href="./src/styles.css" />
   </head>
   <body data-page="counter">
-    <div class="page-shell">
-      <header class="topbar">
-        <a class="brand-lockup brand-link" href="./index.html">
-          <div class="brand-mark">TM</div>
-          <div>
-            <p class="eyebrow">Restaurant loyalty software</p>
-            <h1>TableMint Loyalty OS</h1>
-          </div>
-        </a>
-        <nav class="topnav">
-          <a href="./index.html" data-nav="home">Home</a>
-          <a href="./dashboard.html" data-nav="dashboard">Dashboard</a>
-          <a href="./customers.html" data-nav="customers">Customers</a>
-          <a href="./rewards.html" data-nav="rewards">Rewards</a>
-          <a href="./campaigns.html" data-nav="campaigns">Campaigns</a>
-          <a href="./counter.html" data-nav="counter">Counter</a>
-          <a href="./branches.html" data-nav="branches">Branches</a>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <a class="brand-link" href="./index.html"><div class="brand-mark">TM</div><div><p class="eyebrow">Restaurant loyalty software</p><h2>TableMint Loyalty OS</h2></div></a>
+        <nav class="sidebar-nav">
+          <div class="nav-group"><p class="nav-section-title">Overview</p><div class="nav-links"><a class="nav-link" href="./index.html" data-nav="home"><span>Executive View</span><span>01</span></a><a class="nav-link" href="./dashboard.html" data-nav="dashboard"><span>Dashboard</span><span>02</span></a></div></div>
+          <div class="nav-group"><p class="nav-section-title">Operations</p><div class="nav-links"><a class="nav-link" href="./customers.html" data-nav="customers"><span>Customers</span><span>CRM</span></a><a class="nav-link" href="./counter.html" data-nav="counter"><span>Counter</span><span>POS</span></a><a class="nav-link" href="./branches.html" data-nav="branches"><span>Branches</span><span>Ops</span></a></div></div>
+          <div class="nav-group"><p class="nav-section-title">Growth</p><div class="nav-links"><a class="nav-link" href="./rewards.html" data-nav="rewards"><span>Rewards</span><span>Rules</span></a><a class="nav-link" href="./campaigns.html" data-nav="campaigns"><span>Campaigns</span><span>ROI</span></a></div></div>
         </nav>
-      </header>
+      </aside>
 
-      <main class="app-page">
-        <section class="page-intro">
-          <div>
-            <p class="section-kicker">Counter View</p>
-            <h2>Fast earn and redeem flow for branch staff during billing.</h2>
-          </div>
-          <a class="secondary-btn" href="./customers.html">Find customer profiles</a>
-        </section>
+      <div class="workspace">
+        <header class="workspace-header">
+          <div class="header-search">Search guest phone or scan membership QR</div>
+          <div class="header-actions"><div class="header-pill">Wardha Road branch</div><div class="header-profile"><div class="avatar">CT</div><div><strong>Counter Flow</strong><p class="meta-text">Staff-safe actions</p></div></div></div>
+        </header>
 
-        <section class="dual-grid">
-          <article class="table-card">
-            <div class="stream-head">
-              <p>Current bill</p>
-              <span class="muted">Wardha Road branch</span>
+        <main class="workspace-main">
+          <section class="page-header">
+            <div class="page-title">
+              <p class="section-kicker">Counter Workflow</p>
+              <h1>Fast earn and redeem flow for live billing.</h1>
+              <p class="muted-copy">A professional rollout depends on branch staff actually being able to use the product. This screen is intentionally simple, fast, and role-safe.</p>
             </div>
-            <div class="bill-card">
-              <div class="bill-line"><span>Guest phone</span><strong>+91 98XXXXXX42</strong></div>
-              <div class="bill-line"><span>Customer found</span><strong>Riya Sharma • Gold tier</strong></div>
-              <div class="bill-line"><span>Bill amount</span><strong>₹1,840</strong></div>
-              <div class="bill-line"><span>Eligible points</span><strong>+184</strong></div>
-              <div class="bill-line"><span>Available reward</span><strong>Free dessert</strong></div>
+            <div class="page-actions">
+              <a class="primary-btn" href="./customers.html">Open guest CRM</a>
+              <a class="secondary-btn" href="./branches.html">View branch controls</a>
             </div>
-            <div class="action-grid">
-              <button class="mini-action action-button" type="button">Apply reward</button>
-              <button class="mini-action action-button" type="button">Credit points</button>
-            </div>
-          </article>
+          </section>
 
-          <article class="table-card">
-            <div class="stream-head">
-              <p>Staff guidance</p>
-              <span class="muted">Built for speed</span>
-            </div>
-            <div class="timeline-stack">
-              <div class="timeline-item">
-                <strong>1. Search</strong>
-                <span>Enter phone number or scan membership QR</span>
+          <section class="split-grid">
+            <article class="table-card">
+              <div class="stream-head"><div><p class="panel-label">Current bill</p><h3>Live checkout panel</h3></div><span class="badge success">Member found</span></div>
+              <div class="counter-summary">
+                <div class="bill-line"><span>Guest phone</span><strong>+91 98XXXXXX42</strong></div>
+                <div class="bill-line"><span>Customer</span><strong>Riya Sharma • Gold tier</strong></div>
+                <div class="bill-line"><span>Bill amount</span><strong>₹1,840</strong></div>
+                <div class="bill-line"><span>Points to credit</span><strong>+184</strong></div>
+                <div class="bill-line"><span>Eligible reward</span><strong>Free dessert</strong></div>
               </div>
-              <div class="timeline-item">
-                <strong>2. Verify</strong>
-                <span>Show branch-safe reward options and available balance</span>
+              <div class="action-grid">
+                <button class="primary-btn" type="button">Apply reward</button>
+                <button class="secondary-btn" type="button">Credit points</button>
               </div>
-              <div class="timeline-item">
-                <strong>3. Complete</strong>
-                <span>Redeem reward or issue points in one step after billing</span>
-              </div>
-            </div>
-          </article>
-        </section>
+            </article>
 
-        <section class="platform-grid">
-          <article class="feature-panel">
-            <p class="panel-label">Practical value</p>
-            <h3>Staff can use it without learning a complex dashboard.</h3>
-            <p>This makes the owner trust that rollout across all 7 branches is realistic.</p>
-          </article>
-          <article class="feature-panel">
-            <p class="panel-label">Control</p>
-            <h3>Cashiers only see safe actions while managers handle exceptions.</h3>
-            <p>That reduces accidental misuse and keeps operations disciplined.</p>
-          </article>
-          <article class="feature-panel">
-            <p class="panel-label">Adoption</p>
-            <h3>Phone-based lookup means customers do not need a separate app on day one.</h3>
-            <p>Perfect for MVP rollout and easier staff onboarding.</p>
-          </article>
-        </section>
-      </main>
+            <article class="table-card">
+              <div class="stream-head"><div><p class="panel-label">Guided flow</p><h3>What staff does</h3></div><span class="badge">Low training required</span></div>
+              <div class="timeline-stack">
+                <div class="timeline-item"><strong>1. Search</strong><span>Enter phone number or scan QR to identify the guest instantly</span></div>
+                <div class="timeline-item"><strong>2. Verify</strong><span>Show points, tier, reward availability, and branch-safe actions</span></div>
+                <div class="timeline-item"><strong>3. Complete</strong><span>Redeem reward or credit points after bill confirmation</span></div>
+                <div class="timeline-item"><strong>4. Log</strong><span>Save the transaction in the audit trail for owner reporting</span></div>
+              </div>
+            </article>
+          </section>
+
+          <section class="three-grid">
+            <article class="feature-card"><p class="panel-label">Practical value</p><h3>Designed for speed under service pressure.</h3><p class="panel-copy">A cashier should not need to understand marketing logic to use loyalty correctly.</p></article>
+            <article class="feature-card"><p class="panel-label">Role safety</p><h3>Staff sees simple actions while exceptions stay manager-only.</h3><p class="panel-copy">That reduces misuse and gives the owner confidence in rollout governance.</p></article>
+            <article class="feature-card"><p class="panel-label">MVP readiness</p><h3>Phone-based loyalty removes dependency on a customer app for launch.</h3><p class="panel-copy">This is easier to explain, train, and sell as phase one.</p></article>
+          </section>
+        </main>
+      </div>
     </div>
-
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>

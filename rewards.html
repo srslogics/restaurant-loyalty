@@ -13,93 +13,73 @@
     <link rel="stylesheet" href="./src/styles.css" />
   </head>
   <body data-page="rewards">
-    <div class="page-shell">
-      <header class="topbar">
-        <a class="brand-lockup brand-link" href="./index.html">
-          <div class="brand-mark">TM</div>
-          <div>
-            <p class="eyebrow">Restaurant loyalty software</p>
-            <h1>TableMint Loyalty OS</h1>
-          </div>
-        </a>
-        <nav class="topnav">
-          <a href="./index.html" data-nav="home">Home</a>
-          <a href="./dashboard.html" data-nav="dashboard">Dashboard</a>
-          <a href="./customers.html" data-nav="customers">Customers</a>
-          <a href="./rewards.html" data-nav="rewards">Rewards</a>
-          <a href="./campaigns.html" data-nav="campaigns">Campaigns</a>
-          <a href="./counter.html" data-nav="counter">Counter</a>
-          <a href="./branches.html" data-nav="branches">Branches</a>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <a class="brand-link" href="./index.html"><div class="brand-mark">TM</div><div><p class="eyebrow">Restaurant loyalty software</p><h2>TableMint Loyalty OS</h2></div></a>
+        <nav class="sidebar-nav">
+          <div class="nav-group"><p class="nav-section-title">Overview</p><div class="nav-links"><a class="nav-link" href="./index.html" data-nav="home"><span>Executive View</span><span>01</span></a><a class="nav-link" href="./dashboard.html" data-nav="dashboard"><span>Dashboard</span><span>02</span></a></div></div>
+          <div class="nav-group"><p class="nav-section-title">Operations</p><div class="nav-links"><a class="nav-link" href="./customers.html" data-nav="customers"><span>Customers</span><span>CRM</span></a><a class="nav-link" href="./counter.html" data-nav="counter"><span>Counter</span><span>POS</span></a><a class="nav-link" href="./branches.html" data-nav="branches"><span>Branches</span><span>Ops</span></a></div></div>
+          <div class="nav-group"><p class="nav-section-title">Growth</p><div class="nav-links"><a class="nav-link" href="./rewards.html" data-nav="rewards"><span>Rewards</span><span>Rules</span></a><a class="nav-link" href="./campaigns.html" data-nav="campaigns"><span>Campaigns</span><span>ROI</span></a></div></div>
         </nav>
-      </header>
+      </aside>
 
-      <main class="app-page">
-        <section class="page-intro">
-          <div>
-            <p class="section-kicker">Rewards Studio</p>
-            <h2>Build loyalty rules that match how each outlet grows.</h2>
-          </div>
-          <a class="secondary-btn" href="./branches.html">See branch usage</a>
-        </section>
+      <div class="workspace">
+        <header class="workspace-header">
+          <div class="header-search">Search reward template, points rule, coupon type</div>
+          <div class="header-actions"><div class="header-pill">Policy engine</div><div class="header-profile"><div class="avatar">RW</div><div><strong>Rewards Studio</strong><p class="meta-text">Rule builder</p></div></div></div>
+        </header>
 
-        <section class="reward-layout">
-          <div class="reward-selector">
-            <button class="reward-tab active" data-reward="birthday">Birthday offer</button>
-            <button class="reward-tab" data-reward="weekday">Weekday boost</button>
-            <button class="reward-tab" data-reward="vip">VIP tier</button>
-          </div>
-
-          <div class="reward-preview" id="rewardPreview"></div>
-        </section>
-
-        <section class="platform-grid">
-          <article class="feature-panel">
-            <p class="panel-label">Point rule</p>
-            <h3>1 point for every ₹100 spent, with category exclusions if needed.</h3>
-            <p>Useful for controlling beverage, combo, or discounted-item earning.</p>
-          </article>
-          <article class="feature-panel">
-            <p class="panel-label">Auto messaging</p>
-            <h3>Trigger SMS or WhatsApp when guests earn, redeem, or near expiry.</h3>
-            <p>Keeps the program visible without extra staff effort.</p>
-          </article>
-          <article class="feature-panel">
-            <p class="panel-label">Smart segmentation</p>
-            <h3>Run offers only for inactive lunch regulars or premium families.</h3>
-            <p>Focused campaigns protect margins better than broad discounts.</p>
-          </article>
-        </section>
-
-        <section class="dual-grid">
-          <article class="table-card">
-            <div class="stream-head">
-              <p>Reward templates</p>
-              <span class="muted">Fast launch library</span>
+        <main class="workspace-main">
+          <section class="page-header">
+            <div class="page-title">
+              <p class="section-kicker">Rewards Studio</p>
+              <h1>Build loyalty rules that scale across branches.</h1>
+              <p class="muted-copy">This screen is designed around how a real product would manage point logic, reward templates, and governance so the owner feels the system is flexible but controlled.</p>
             </div>
-            <div class="template-list">
-              <div><strong>Birthday dessert</strong><span>High redemption, easy to explain</span></div>
-              <div><strong>5th visit perk</strong><span>Visit-based loyalty for casual guests</span></div>
-              <div><strong>VIP dinner bonus</strong><span>Premium tier reward for big spenders</span></div>
-              <div><strong>Quiet-day booster</strong><span>Designed to fill Tuesday and Wednesday</span></div>
+            <div class="page-actions">
+              <a class="primary-btn" href="./campaigns.html">Use in campaign</a>
+              <a class="secondary-btn" href="./branches.html">Check branch impact</a>
             </div>
-          </article>
+          </section>
 
-          <article class="table-card">
-            <div class="stream-head">
-              <p>Redemption safeguards</p>
-              <span class="muted">Owner confidence tools</span>
+          <section class="reward-layout">
+            <div class="reward-selector">
+              <button class="reward-tab active" data-reward="birthday" type="button">Birthday offer</button>
+              <button class="reward-tab" data-reward="weekday" type="button">Weekday boost</button>
+              <button class="reward-tab" data-reward="vip" type="button">VIP tier</button>
             </div>
-            <div class="template-list">
-              <div><strong>Manager approval</strong><span>For manual point edits above set limits</span></div>
-              <div><strong>Bill validation</strong><span>Reject duplicate or cancelled bill rewards</span></div>
-              <div><strong>Expiry rules</strong><span>Control liability on unused rewards</span></div>
-              <div><strong>Audit log</strong><span>Track every earn, redeem, and reversal</span></div>
-            </div>
-          </article>
-        </section>
-      </main>
+            <div class="reward-preview" id="rewardPreview"></div>
+          </section>
+
+          <section class="three-grid">
+            <article class="feature-card"><p class="panel-label">Point rule</p><h3>1 point for every ₹100 with branch or category exceptions.</h3><p class="panel-copy">Useful for excluding discounted items or giving extra value on high-margin categories.</p></article>
+            <article class="feature-card"><p class="panel-label">Auto messaging</p><h3>Trigger WhatsApp or SMS after earn, redeem, expiry, or birthday logic.</h3><p class="panel-copy">Keeps loyalty visible without adding manual staff work.</p></article>
+            <article class="feature-card"><p class="panel-label">Audit safety</p><h3>Manual edits, reversals, and exceptions can be permission-protected.</h3><p class="panel-copy">This is the kind of control an owner expects in real software.</p></article>
+          </section>
+
+          <section class="split-grid">
+            <article class="table-card">
+              <div class="stream-head"><div><p class="panel-label">Reward templates</p><h3>Fast-launch library</h3></div><span class="badge">4 recommended</span></div>
+              <div class="template-list">
+                <div><strong>Birthday dessert</strong><span>High redemption and easy branch execution</span></div>
+                <div><strong>5th visit perk</strong><span>Ideal for casual repeat behavior</span></div>
+                <div><strong>VIP dinner bonus</strong><span>Premium tier reward for high-value diners</span></div>
+                <div><strong>Quiet-day booster</strong><span>Designed to lift Tuesday and Wednesday footfall</span></div>
+              </div>
+            </article>
+            <article class="table-card">
+              <div class="stream-head"><div><p class="panel-label">Governance</p><h3>Redemption safeguards</h3></div><span class="badge warning">Policy controls</span></div>
+              <div class="template-list">
+                <div><strong>Manager approval</strong><span>Required for unusual manual point edits</span></div>
+                <div><strong>Bill validation</strong><span>Reject cancelled or duplicate transaction claims</span></div>
+                <div><strong>Expiry rules</strong><span>Manage reward liability without confusion</span></div>
+                <div><strong>Audit log</strong><span>Track every earn, redeem, and reversal</span></div>
+              </div>
+            </article>
+          </section>
+        </main>
+      </div>
     </div>
-
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>

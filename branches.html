@@ -13,130 +13,76 @@
     <link rel="stylesheet" href="./src/styles.css" />
   </head>
   <body data-page="branches">
-    <div class="page-shell">
-      <header class="topbar">
-        <a class="brand-lockup brand-link" href="./index.html">
-          <div class="brand-mark">TM</div>
-          <div>
-            <p class="eyebrow">Restaurant loyalty software</p>
-            <h1>TableMint Loyalty OS</h1>
-          </div>
-        </a>
-        <nav class="topnav">
-          <a href="./index.html" data-nav="home">Home</a>
-          <a href="./dashboard.html" data-nav="dashboard">Dashboard</a>
-          <a href="./customers.html" data-nav="customers">Customers</a>
-          <a href="./rewards.html" data-nav="rewards">Rewards</a>
-          <a href="./campaigns.html" data-nav="campaigns">Campaigns</a>
-          <a href="./counter.html" data-nav="counter">Counter</a>
-          <a href="./branches.html" data-nav="branches">Branches</a>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <a class="brand-link" href="./index.html"><div class="brand-mark">TM</div><div><p class="eyebrow">Restaurant loyalty software</p><h2>TableMint Loyalty OS</h2></div></a>
+        <nav class="sidebar-nav">
+          <div class="nav-group"><p class="nav-section-title">Overview</p><div class="nav-links"><a class="nav-link" href="./index.html" data-nav="home"><span>Executive View</span><span>01</span></a><a class="nav-link" href="./dashboard.html" data-nav="dashboard"><span>Dashboard</span><span>02</span></a></div></div>
+          <div class="nav-group"><p class="nav-section-title">Operations</p><div class="nav-links"><a class="nav-link" href="./customers.html" data-nav="customers"><span>Customers</span><span>CRM</span></a><a class="nav-link" href="./counter.html" data-nav="counter"><span>Counter</span><span>POS</span></a><a class="nav-link" href="./branches.html" data-nav="branches"><span>Branches</span><span>Ops</span></a></div></div>
+          <div class="nav-group"><p class="nav-section-title">Growth</p><div class="nav-links"><a class="nav-link" href="./rewards.html" data-nav="rewards"><span>Rewards</span><span>Rules</span></a><a class="nav-link" href="./campaigns.html" data-nav="campaigns"><span>Campaigns</span><span>ROI</span></a></div></div>
         </nav>
-      </header>
+      </aside>
 
-      <main class="app-page">
-        <section class="page-intro">
-          <div>
-            <p class="section-kicker">Branches</p>
-            <h2>Compare outlet-level loyalty health without losing the chain view.</h2>
-          </div>
-          <a class="secondary-btn" href="./dashboard.html">Back to overview</a>
-        </section>
+      <div class="workspace">
+        <header class="workspace-header">
+          <div class="header-search">Search branch, manager, performance, alerts</div>
+          <div class="header-actions"><div class="header-pill">7 active outlets</div><div class="header-profile"><div class="avatar">BR</div><div><strong>Branch Operations</strong><p class="meta-text">Chain-wide view</p></div></div></div>
+        </header>
 
-        <section class="platform-grid">
-          <article class="feature-panel">
-            <p class="panel-label">Wardha Road</p>
-            <h3>Highest repeat rate and strong Gold-tier conversions.</h3>
-            <p>Best branch for testing premium tier offers and family bundles.</p>
-          </article>
-          <article class="feature-panel">
-            <p class="panel-label">Dharampeth</p>
-            <h3>Fastest member growth during lunch and evening office traffic.</h3>
-            <p>Ideal for weekday point multipliers and referral pushes.</p>
-          </article>
-          <article class="feature-panel">
-            <p class="panel-label">Sadar</p>
-            <h3>Needs closer control on redemptions and inactive guest reactivation.</h3>
-            <p>Owner should review local offer discipline and staff redemption flow.</p>
-          </article>
-        </section>
+        <main class="workspace-main">
+          <section class="page-header">
+            <div class="page-title">
+              <p class="section-kicker">Branch Operations</p>
+              <h1>Compare outlet-level health without losing the group view.</h1>
+              <p class="muted-copy">This screen makes the demo feel enterprise-ready by showing how the owner would govern multiple branches, monitor adoption, and onboard new locations.</p>
+            </div>
+            <div class="page-actions">
+              <a class="primary-btn" href="./dashboard.html">Return to dashboard</a>
+              <a class="secondary-btn" href="./counter.html">Preview staff flow</a>
+            </div>
+          </section>
 
-        <section class="table-card">
-          <div class="stream-head">
-            <p>Branch snapshot</p>
-            <span class="muted">Current month</span>
-          </div>
-          <div class="customer-table">
-            <div class="table-row table-head">
-              <span>Branch</span>
-              <span>Members</span>
-              <span>Repeat share</span>
-              <span>Redeemed</span>
-              <span>Alert</span>
-            </div>
-            <div class="table-row">
-              <span>Wardha Road</span>
-              <span>4,620</span>
-              <span>84%</span>
-              <span>312</span>
-              <span>Healthy</span>
-            </div>
-            <div class="table-row">
-              <span>Dharampeth</span>
-              <span>3,980</span>
-              <span>72%</span>
-              <span>284</span>
-              <span>Growing</span>
-            </div>
-            <div class="table-row">
-              <span>Sadar</span>
-              <span>2,760</span>
-              <span>64%</span>
-              <span>336</span>
-              <span>Review rewards</span>
-            </div>
-          </div>
-        </section>
+          <section class="three-grid">
+            <article class="feature-card"><p class="panel-label">Wardha Road</p><h3>Highest repeat rate and strongest premium-tier progression.</h3><p class="panel-copy">Ideal branch for testing premium offers and special-occasion bundles.</p></article>
+            <article class="feature-card"><p class="panel-label">Dharampeth</p><h3>Fastest member growth during office lunch and evening rush.</h3><p class="panel-copy">Good location for weekday boosters and referral-led acquisition.</p></article>
+            <article class="feature-card"><p class="panel-label">Sadar</p><h3>Needs closer review on reward usage discipline.</h3><p class="panel-copy">Professional software should surface operational outliers like this.</p></article>
+          </section>
 
-        <section class="dual-grid">
-          <article class="feature-panel">
-            <p class="panel-label">Staff leaderboard</p>
-            <div class="segment-list">
-              <div>
-                <strong>Aakash • Wardha Road</strong>
-                <span>62 enrollments this week</span>
-              </div>
-              <div>
-                <strong>Megha • Dharampeth</strong>
-                <span>Highest reward redemption accuracy</span>
-              </div>
-              <div>
-                <strong>Rahul • Sadar</strong>
-                <span>Needs retraining on coupon checks</span>
-              </div>
+          <section class="table-card">
+            <div class="table-toolbar">
+              <div><p class="panel-label">Branch snapshot</p><h3>Current month</h3></div>
+              <span class="badge">Ops reporting</span>
             </div>
-          </article>
+            <div class="table-grid">
+              <div class="table-row table-head"><span>Branch</span><span>Members</span><span>Repeat share</span><span>Redeemed</span><span>Alert</span></div>
+              <div class="table-row"><span>Wardha Road</span><span>4,620</span><span>84%</span><span>312</span><span>Healthy</span></div>
+              <div class="table-row"><span>Dharampeth</span><span>3,980</span><span>72%</span><span>284</span><span>Growing</span></div>
+              <div class="table-row"><span>Sadar</span><span>2,760</span><span>64%</span><span>336</span><span>Review rewards</span></div>
+            </div>
+          </section>
 
-          <article class="feature-panel">
-            <p class="panel-label">New branch onboarding</p>
-            <div class="timeline-stack">
-              <div class="timeline-item">
-                <strong>Step 1</strong>
-                <span>Create branch profile and assign manager login</span>
+          <section class="split-grid">
+            <article class="feature-card">
+              <p class="panel-label">Staff leaderboard</p>
+              <div class="segment-list">
+                <div><strong>Aakash • Wardha Road</strong><span>62 enrollments this week</span></div>
+                <div><strong>Megha • Dharampeth</strong><span>Highest redemption accuracy</span></div>
+                <div><strong>Rahul • Sadar</strong><span>Needs retraining on coupon checks</span></div>
               </div>
-              <div class="timeline-item">
-                <strong>Step 2</strong>
-                <span>Choose default point rules and launch rewards</span>
+            </article>
+
+            <article class="feature-card">
+              <p class="panel-label">New branch onboarding</p>
+              <div class="timeline-stack">
+                <div class="timeline-item"><strong>Step 1</strong><span>Create branch profile and manager access</span></div>
+                <div class="timeline-item"><strong>Step 2</strong><span>Apply default point rules and loyalty templates</span></div>
+                <div class="timeline-item"><strong>Step 3</strong><span>Go live with reporting, wallet sync, and role controls</span></div>
               </div>
-              <div class="timeline-item">
-                <strong>Step 3</strong>
-                <span>Go live with customer wallet and reporting on day one</span>
-              </div>
-            </div>
-          </article>
-        </section>
-      </main>
+            </article>
+          </section>
+        </main>
+      </div>
     </div>
-
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>
