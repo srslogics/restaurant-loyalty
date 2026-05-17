@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TableMint Loyalty OS</title>
+    <meta
+      name="description"
+      content="A premium multi-branch loyalty operating system for restaurant groups."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <div class="brand-mark">TM</div>
+          <div>
+            <p class="eyebrow">Multi-branch restaurant loyalty</p>
+            <h1>TableMint Loyalty OS</h1>
+          </div>
+        </div>
+        <nav class="topnav">
+          <a href="#platform">Platform</a>
+          <a href="#rewards">Rewards</a>
+          <a href="#insights">Insights</a>
+          <a href="#roadmap">Roadmap</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="section-kicker">Built for a 7-outlet restaurant chain</p>
+            <h2>
+              Turn every bill into a repeat visit with one shared customer
+              wallet across all branches.
+            </h2>
+            <p class="hero-text">
+              This frontend concept shows the kind of premium loyalty software
+              we can build: branch-aware, campaign-ready, fast at the counter,
+              and clear for the owner.
+            </p>
+            <div class="cta-row">
+              <a class="primary-btn" href="#platform">Explore platform</a>
+              <button class="secondary-btn" id="previewRewards">
+                Preview reward flow
+              </button>
+            </div>
+
+            <div class="hero-metrics">
+              <article>
+                <span>7</span>
+                <p>Branches connected</p>
+              </article>
+              <article>
+                <span>1</span>
+                <p>Unified customer wallet</p>
+              </article>
+              <article>
+                <span>24/7</span>
+                <p>Owner visibility</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-panel" aria-label="Dashboard preview">
+            <div class="panel-glow"></div>
+            <div class="panel-header">
+              <div>
+                <p class="panel-label">Today across all outlets</p>
+                <h3>Live loyalty activity</h3>
+              </div>
+              <span class="status-pill">Healthy sync</span>
+            </div>
+
+            <div class="stats-grid">
+              <article class="stat-card accent">
+                <p>Members enrolled</p>
+                <strong>18,420</strong>
+                <span>+186 this week</span>
+              </article>
+              <article class="stat-card">
+                <p>Repeat revenue</p>
+                <strong>₹4.8L</strong>
+                <span>31% of sales</span>
+              </article>
+              <article class="stat-card">
+                <p>Rewards redeemed</p>
+                <strong>1,264</strong>
+                <span>Most used: free dessert</span>
+              </article>
+              <article class="stat-card">
+                <p>Inactive guests</p>
+                <strong>932</strong>
+                <span>Win-back campaign ready</span>
+              </article>
+            </div>
+
+            <div class="activity-stream">
+              <div class="stream-head">
+                <p>Recent activity</p>
+                <button id="rotateActivity">Refresh</button>
+              </div>
+              <ul id="activityList"></ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="platform" id="platform">
+          <div class="section-heading">
+            <p class="section-kicker">Platform</p>
+            <h2>One system for the counter staff, managers, and owner.</h2>
+          </div>
+
+          <div class="platform-grid">
+            <article class="feature-panel large">
+              <div class="feature-copy">
+                <p class="panel-label">Counter experience</p>
+                <h3>Find customer by phone, issue points, redeem rewards.</h3>
+                <p>
+                  The branch team gets a fast billing-side flow so loyalty never
+                  slows service during rush hours.
+                </p>
+              </div>
+              <div class="mini-screen">
+                <div class="customer-card">
+                  <div>
+                    <p class="muted">Member</p>
+                    <strong>Riya Sharma</strong>
+                    <p class="muted">Gold tier • Sitabuldi branch regular</p>
+                  </div>
+                  <span>1,260 pts</span>
+                </div>
+                <div class="bill-row">
+                  <span>Bill amount</span>
+                  <strong>₹1,840</strong>
+                </div>
+                <div class="earn-row">
+                  <span>Points earned</span>
+                  <strong>+184</strong>
+                </div>
+                <button class="mini-cta">Redeem dessert reward</button>
+              </div>
+            </article>
+
+            <article class="feature-panel">
+              <p class="panel-label">Campaign engine</p>
+              <h3>Schedule offers by branch, customer segment, or day.</h3>
+              <p>
+                Run birthday rewards, quiet-day offers, referral bonuses, and
+                premium tier unlocks from one dashboard.
+              </p>
+            </article>
+
+            <article class="feature-panel">
+              <p class="panel-label">Shared wallet</p>
+              <h3>Earn in one branch, redeem in any other branch.</h3>
+              <p>
+                Perfect for a restaurant group with regulars who visit multiple
+                locations across Nagpur.
+              </p>
+            </article>
+
+            <article class="feature-panel">
+              <p class="panel-label">Access control</p>
+              <h3>Separate roles for cashier, manager, and owner.</h3>
+              <p>
+                Keep everyday actions simple while protecting edits, refunds,
+                and point adjustments.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="rewards" id="rewards">
+          <div class="section-heading">
+            <p class="section-kicker">Rewards Studio</p>
+            <h2>Mix points, visits, tiers, coupons, and surprise perks.</h2>
+          </div>
+
+          <div class="reward-layout">
+            <div class="reward-selector">
+              <button class="reward-tab active" data-reward="birthday">
+                Birthday offer
+              </button>
+              <button class="reward-tab" data-reward="weekday">
+                Weekday boost
+              </button>
+              <button class="reward-tab" data-reward="vip">
+                VIP tier
+              </button>
+            </div>
+
+            <div class="reward-preview" id="rewardPreview">
+              <p class="panel-label">Live reward configuration</p>
+              <h3>Birthday Treat</h3>
+              <p>
+                Automatically send a free dessert coupon 3 days before the
+                guest's birthday and keep it valid for 7 days.
+              </p>
+              <div class="reward-tags">
+                <span>All branches</span>
+                <span>WhatsApp + SMS</span>
+                <span>Auto-issued</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="insights" id="insights">
+          <div class="section-heading">
+            <p class="section-kicker">Insights</p>
+            <h2>See where repeat business is growing and where attention is needed.</h2>
+          </div>
+
+          <div class="insight-grid">
+            <article class="chart-card">
+              <div class="stream-head">
+                <p>Branch performance</p>
+                <span class="muted">Repeat guest share</span>
+              </div>
+              <div class="bars">
+                <div><span>Wardha Road</span><i style="width: 84%"></i><b>84%</b></div>
+                <div><span>Dharampeth</span><i style="width: 72%"></i><b>72%</b></div>
+                <div><span>Manish Nagar</span><i style="width: 68%"></i><b>68%</b></div>
+                <div><span>Sadar</span><i style="width: 64%"></i><b>64%</b></div>
+              </div>
+            </article>
+
+            <article class="chart-card">
+              <div class="stream-head">
+                <p>Win-back queue</p>
+                <span class="muted">Guests inactive for 30+ days</span>
+              </div>
+              <div class="inactive-list">
+                <div><strong>Dining couples</strong><span>214 guests</span></div>
+                <div><strong>Family weekend spenders</strong><span>153 guests</span></div>
+                <div><strong>Office lunch regulars</strong><span>88 guests</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="roadmap" id="roadmap">
+          <div class="section-heading">
+            <p class="section-kicker">Build path</p>
+            <h2>A clean way to ship the product in phases.</h2>
+          </div>
+
+          <div class="timeline">
+            <article>
+              <span>Phase 1</span>
+              <h3>MVP loyalty core</h3>
+              <p>
+                Branch logins, customer profiles, points, redemption, and owner
+                dashboard.
+              </p>
+            </article>
+            <article>
+              <span>Phase 2</span>
+              <h3>Campaigns and messaging</h3>
+              <p>
+                WhatsApp/SMS flows, birthday rewards, referrals, and targeted
+                offers.
+              </p>
+            </article>
+            <article>
+              <span>Phase 3</span>
+              <h3>Premium retention engine</h3>
+              <p>
+                App experience, smart segmentation, churn alerts, and customer
+                lifetime analytics.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
