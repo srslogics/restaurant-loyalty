@@ -1,8 +1,10 @@
+const rewardPreview = document.querySelector("#rewardPreview");
+const rewardTabs = document.querySelectorAll(".reward-tab");
 const activityList = document.querySelector("#activityList");
 const rotateButton = document.querySelector("#rotateActivity");
-const previewButton = document.querySelector("#previewRewards");
-const rewardTabs = document.querySelectorAll(".reward-tab");
-const rewardPreview = document.querySelector("#rewardPreview");
+const pills = document.querySelectorAll(".pill");
+const customerRows = document.querySelectorAll(".customer-table .table-row[data-segment]");
+const currentPage = document.body.dataset.page;
 
 const activitySets = [
   [
@@ -45,9 +47,18 @@ const rewardContent = {
 
 let currentActivityIndex = 0;
 
+function setActiveNav() {
+  document.querySelectorAll("[data-nav]").forEach((link) => {
+    link.classList.toggle("active", link.dataset.nav === currentPage);
+  });
+}
+
 function renderActivity(index) {
-  const items = activitySets[index];
-  activityList.innerHTML = items
+  if (!activityList) {
+    return;
+  }
+
+  activityList.innerHTML = activitySets[index]
     .map(
       ([branch, text]) =>
         `<li><strong>${branch}</strong><span>${text}</span></li>`,
@@ -56,6 +67,10 @@ function renderActivity(index) {
 }
 
 function renderReward(key) {
+  if (!rewardPreview) {
+    return;
+  }
+
   const reward = rewardContent[key];
   rewardPreview.innerHTML = `
     <p class="panel-label">Live reward configuration</p>
@@ -67,17 +82,16 @@ function renderReward(key) {
   `;
 }
 
+function filterCustomers(segment) {
+  customerRows.forEach((row) => {
+    const rowSegment = row.dataset.segment;
+    row.hidden = !(segment === "all" || rowSegment === segment);
+  });
+}
+
 rotateButton?.addEventListener("click", () => {
   currentActivityIndex = (currentActivityIndex + 1) % activitySets.length;
   renderActivity(currentActivityIndex);
-});
-
-previewButton?.addEventListener("click", () => {
-  const nextTab =
-    Array.from(rewardTabs).find((tab) => !tab.classList.contains("active")) ||
-    rewardTabs[0];
-  nextTab.click();
-  rewardPreview.scrollIntoView({ behavior: "smooth", block: "center" });
 });
 
 rewardTabs.forEach((tab) => {
@@ -88,5 +102,15 @@ rewardTabs.forEach((tab) => {
   });
 });
 
+pills.forEach((pill) => {
+  pill.addEventListener("click", () => {
+    pills.forEach((item) => item.classList.remove("active"));
+    pill.classList.add("active");
+    filterCustomers(pill.dataset.segment);
+  });
+});
+
+setActiveNav();
 renderActivity(currentActivityIndex);
 renderReward("birthday");
+filterCustomers("all");

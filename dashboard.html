@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | TableMint Loyalty OS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body data-page="dashboard">
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand-lockup brand-link" href="./index.html">
+          <div class="brand-mark">TM</div>
+          <div>
+            <p class="eyebrow">Restaurant loyalty software</p>
+            <h1>TableMint Loyalty OS</h1>
+          </div>
+        </a>
+        <nav class="topnav">
+          <a href="./index.html" data-nav="home">Home</a>
+          <a href="./dashboard.html" data-nav="dashboard">Dashboard</a>
+          <a href="./customers.html" data-nav="customers">Customers</a>
+          <a href="./rewards.html" data-nav="rewards">Rewards</a>
+          <a href="./branches.html" data-nav="branches">Branches</a>
+        </nav>
+      </header>
+
+      <main class="app-page">
+        <section class="page-intro">
+          <div>
+            <p class="section-kicker">Owner Dashboard</p>
+            <h2>Track loyalty-led growth across all outlets.</h2>
+          </div>
+          <a class="secondary-btn" href="./customers.html">Open customer CRM</a>
+        </section>
+
+        <section class="stat-strip four">
+          <article class="stat-card accent">
+            <p>Total members</p>
+            <strong>18,420</strong>
+            <span>+186 this week</span>
+          </article>
+          <article class="stat-card">
+            <p>Repeat revenue</p>
+            <strong>₹4.8L</strong>
+            <span>31% of total sales</span>
+          </article>
+          <article class="stat-card">
+            <p>Rewards redeemed</p>
+            <strong>1,264</strong>
+            <span>Top reward: free dessert</span>
+          </article>
+          <article class="stat-card">
+            <p>At-risk guests</p>
+            <strong>932</strong>
+            <span>Need win-back campaign</span>
+          </article>
+        </section>
+
+        <section class="insight-grid">
+          <article class="chart-card">
+            <div class="stream-head">
+              <p>Branch performance</p>
+              <span class="muted">Repeat guest share</span>
+            </div>
+            <div class="bars">
+              <div><span>Wardha Road</span><i style="width: 84%"></i><b>84%</b></div>
+              <div><span>Dharampeth</span><i style="width: 72%"></i><b>72%</b></div>
+              <div><span>Manish Nagar</span><i style="width: 68%"></i><b>68%</b></div>
+              <div><span>Sadar</span><i style="width: 64%"></i><b>64%</b></div>
+            </div>
+          </article>
+
+          <article class="chart-card">
+            <div class="stream-head">
+              <p>Recent activity</p>
+              <button id="rotateActivity">Refresh</button>
+            </div>
+            <ul id="activityList"></ul>
+          </article>
+        </section>
+
+        <section class="platform-grid">
+          <article class="feature-panel">
+            <p class="panel-label">Retention insight</p>
+            <h3>214 couples and 153 families are ready for a win-back push.</h3>
+            <p>Use targeted campaigns before the next weekend cycle starts.</p>
+          </article>
+          <article class="feature-panel">
+            <p class="panel-label">Branch alert</p>
+            <h3>Sadar redemptions are rising faster than visits this month.</h3>
+            <p>Check coupon quality and floor manager training for misuse.</p>
+          </article>
+          <article class="feature-panel">
+            <p class="panel-label">Growth idea</p>
+            <h3>Midweek traffic can improve with a Tuesday double-points plan.</h3>
+            <p>Move to rewards studio to launch it across selected branches.</p>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

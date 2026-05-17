@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rewards | TableMint Loyalty OS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body data-page="rewards">
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand-lockup brand-link" href="./index.html">
+          <div class="brand-mark">TM</div>
+          <div>
+            <p class="eyebrow">Restaurant loyalty software</p>
+            <h1>TableMint Loyalty OS</h1>
+          </div>
+        </a>
+        <nav class="topnav">
+          <a href="./index.html" data-nav="home">Home</a>
+          <a href="./dashboard.html" data-nav="dashboard">Dashboard</a>
+          <a href="./customers.html" data-nav="customers">Customers</a>
+          <a href="./rewards.html" data-nav="rewards">Rewards</a>
+          <a href="./branches.html" data-nav="branches">Branches</a>
+        </nav>
+      </header>
+
+      <main class="app-page">
+        <section class="page-intro">
+          <div>
+            <p class="section-kicker">Rewards Studio</p>
+            <h2>Build loyalty rules that match how each outlet grows.</h2>
+          </div>
+          <a class="secondary-btn" href="./branches.html">See branch usage</a>
+        </section>
+
+        <section class="reward-layout">
+          <div class="reward-selector">
+            <button class="reward-tab active" data-reward="birthday">Birthday offer</button>
+            <button class="reward-tab" data-reward="weekday">Weekday boost</button>
+            <button class="reward-tab" data-reward="vip">VIP tier</button>
+          </div>
+
+          <div class="reward-preview" id="rewardPreview"></div>
+        </section>
+
+        <section class="platform-grid">
+          <article class="feature-panel">
+            <p class="panel-label">Point rule</p>
+            <h3>1 point for every ₹100 spent, with category exclusions if needed.</h3>
+            <p>Useful for controlling beverage, combo, or discounted-item earning.</p>
+          </article>
+          <article class="feature-panel">
+            <p class="panel-label">Auto messaging</p>
+            <h3>Trigger SMS or WhatsApp when guests earn, redeem, or near expiry.</h3>
+            <p>Keeps the program visible without extra staff effort.</p>
+          </article>
+          <article class="feature-panel">
+            <p class="panel-label">Smart segmentation</p>
+            <h3>Run offers only for inactive lunch regulars or premium families.</h3>
+            <p>Focused campaigns protect margins better than broad discounts.</p>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

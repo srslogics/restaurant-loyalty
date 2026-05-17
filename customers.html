@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customers | TableMint Loyalty OS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body data-page="customers">
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand-lockup brand-link" href="./index.html">
+          <div class="brand-mark">TM</div>
+          <div>
+            <p class="eyebrow">Restaurant loyalty software</p>
+            <h1>TableMint Loyalty OS</h1>
+          </div>
+        </a>
+        <nav class="topnav">
+          <a href="./index.html" data-nav="home">Home</a>
+          <a href="./dashboard.html" data-nav="dashboard">Dashboard</a>
+          <a href="./customers.html" data-nav="customers">Customers</a>
+          <a href="./rewards.html" data-nav="rewards">Rewards</a>
+          <a href="./branches.html" data-nav="branches">Branches</a>
+        </nav>
+      </header>
+
+      <main class="app-page">
+        <section class="page-intro">
+          <div>
+            <p class="section-kicker">Customer CRM</p>
+            <h2>Find every guest by phone and understand their loyalty behavior.</h2>
+          </div>
+          <div class="filter-pills">
+            <button class="pill active" data-segment="all">All</button>
+            <button class="pill" data-segment="vip">VIP</button>
+            <button class="pill" data-segment="at-risk">At risk</button>
+          </div>
+        </section>
+
+        <section class="table-card">
+          <div class="stream-head">
+            <p>Customer list</p>
+            <span class="muted">Shared across all branches</span>
+          </div>
+          <div class="customer-table" id="customerTable">
+            <div class="table-row table-head">
+              <span>Guest</span>
+              <span>Tier</span>
+              <span>Branch</span>
+              <span>Points</span>
+              <span>Status</span>
+            </div>
+            <div class="table-row" data-segment="vip">
+              <span>Riya Sharma</span>
+              <span>Gold</span>
+              <span>Sitabuldi</span>
+              <span>1,260</span>
+              <span>Active</span>
+            </div>
+            <div class="table-row" data-segment="all">
+              <span>Aditya Mehra</span>
+              <span>Silver</span>
+              <span>Dharampeth</span>
+              <span>620</span>
+              <span>Active</span>
+            </div>
+            <div class="table-row" data-segment="at-risk">
+              <span>Neha Verma</span>
+              <span>Member</span>
+              <span>Sadar</span>
+              <span>180</span>
+              <span>35 days inactive</span>
+            </div>
+            <div class="table-row" data-segment="vip">
+              <span>Kunal Bansal</span>
+              <span>Platinum</span>
+              <span>Wardha Road</span>
+              <span>2,940</span>
+              <span>High value</span>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
