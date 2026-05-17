@@ -55,7 +55,9 @@ body::before {
 .insight-grid,
 .reward-layout,
 .stat-strip,
-.filter-pills {
+.filter-pills,
+.dual-grid,
+.action-grid {
   display: grid;
   gap: 20px;
 }
@@ -348,6 +350,10 @@ main section {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.dual-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .reward-selector {
   display: grid;
   align-content: start;
@@ -426,6 +432,70 @@ main section {
   overflow: hidden;
 }
 
+.action-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mini-action {
+  display: block;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.action-button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.stat-box strong {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.timeline-stack,
+.template-list,
+.segment-list,
+.profile-chips,
+.bill-card {
+  display: grid;
+  gap: 14px;
+}
+
+.timeline-item,
+.template-list div,
+.segment-list div,
+.profile-note,
+.bill-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.profile-chips {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.profile-chips span {
+  padding: 12px 14px;
+  border-radius: 999px;
+  background: rgba(255, 179, 107, 0.1);
+  border: 1px solid rgba(255, 179, 107, 0.18);
+  text-align: center;
+  color: var(--muted);
+}
+
+.profile-note {
+  margin-top: 14px;
+}
+
 .customer-table {
   display: grid;
   gap: 10px;
@@ -460,7 +530,8 @@ main section {
   .reward-layout,
   .page-intro,
   .stat-strip.four,
-  .platform-grid {
+  .platform-grid,
+  .dual-grid {
     grid-template-columns: 1fr;
   }
 
@@ -482,7 +553,10 @@ main section {
   .insight-grid,
   .reward-layout,
   .page-intro,
-  .stat-strip.four {
+  .stat-strip.four,
+  .dual-grid,
+  .action-grid,
+  .profile-chips {
     grid-template-columns: 1fr;
   }
 

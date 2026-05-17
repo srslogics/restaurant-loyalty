@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter | TableMint Loyalty OS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body data-page="counter">
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand-lockup brand-link" href="./index.html">
+          <div class="brand-mark">TM</div>
+          <div>
+            <p class="eyebrow">Restaurant loyalty software</p>
+            <h1>TableMint Loyalty OS</h1>
+          </div>
+        </a>
+        <nav class="topnav">
+          <a href="./index.html" data-nav="home">Home</a>
+          <a href="./dashboard.html" data-nav="dashboard">Dashboard</a>
+          <a href="./customers.html" data-nav="customers">Customers</a>
+          <a href="./rewards.html" data-nav="rewards">Rewards</a>
+          <a href="./campaigns.html" data-nav="campaigns">Campaigns</a>
+          <a href="./counter.html" data-nav="counter">Counter</a>
+          <a href="./branches.html" data-nav="branches">Branches</a>
+        </nav>
+      </header>
+
+      <main class="app-page">
+        <section class="page-intro">
+          <div>
+            <p class="section-kicker">Counter View</p>
+            <h2>Fast earn and redeem flow for branch staff during billing.</h2>
+          </div>
+          <a class="secondary-btn" href="./customers.html">Find customer profiles</a>
+        </section>
+
+        <section class="dual-grid">
+          <article class="table-card">
+            <div class="stream-head">
+              <p>Current bill</p>
+              <span class="muted">Wardha Road branch</span>
+            </div>
+            <div class="bill-card">
+              <div class="bill-line"><span>Guest phone</span><strong>+91 98XXXXXX42</strong></div>
+              <div class="bill-line"><span>Customer found</span><strong>Riya Sharma • Gold tier</strong></div>
+              <div class="bill-line"><span>Bill amount</span><strong>₹1,840</strong></div>
+              <div class="bill-line"><span>Eligible points</span><strong>+184</strong></div>
+              <div class="bill-line"><span>Available reward</span><strong>Free dessert</strong></div>
+            </div>
+            <div class="action-grid">
+              <button class="mini-action action-button" type="button">Apply reward</button>
+              <button class="mini-action action-button" type="button">Credit points</button>
+            </div>
+          </article>
+
+          <article class="table-card">
+            <div class="stream-head">
+              <p>Staff guidance</p>
+              <span class="muted">Built for speed</span>
+            </div>
+            <div class="timeline-stack">
+              <div class="timeline-item">
+                <strong>1. Search</strong>
+                <span>Enter phone number or scan membership QR</span>
+              </div>
+              <div class="timeline-item">
+                <strong>2. Verify</strong>
+                <span>Show branch-safe reward options and available balance</span>
+              </div>
+              <div class="timeline-item">
+                <strong>3. Complete</strong>
+                <span>Redeem reward or issue points in one step after billing</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="platform-grid">
+          <article class="feature-panel">
+            <p class="panel-label">Practical value</p>
+            <h3>Staff can use it without learning a complex dashboard.</h3>
+            <p>This makes the owner trust that rollout across all 7 branches is realistic.</p>
+          </article>
+          <article class="feature-panel">
+            <p class="panel-label">Control</p>
+            <h3>Cashiers only see safe actions while managers handle exceptions.</h3>
+            <p>That reduces accidental misuse and keeps operations disciplined.</p>
+          </article>
+          <article class="feature-panel">
+            <p class="panel-label">Adoption</p>
+            <h3>Phone-based lookup means customers do not need a separate app on day one.</h3>
+            <p>Perfect for MVP rollout and easier staff onboarding.</p>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

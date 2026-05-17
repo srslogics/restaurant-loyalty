@@ -8,6 +8,8 @@ Multi-page frontend concept for a restaurant chain loyalty platform.
 - `dashboard.html` - owner dashboard
 - `customers.html` - customer CRM
 - `rewards.html` - rewards studio
+- `campaigns.html` - campaign planning and performance
+- `counter.html` - staff billing-side loyalty flow
 - `branches.html` - branch performance
 - `src/styles.css` - visual system and responsive layout
 - `src/main.js` - small interactive previews
