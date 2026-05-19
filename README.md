@@ -1,6 +1,6 @@
-# TableMint Loyalty OS
+# Yamazaki Privilege OS
 
-Multi-page frontend concept for a restaurant chain loyalty platform.
+Multi-page frontend concept for Yamazaki Hospitality Fleet's loyalty and membership platform.
 
 ## Files
 
