@@ -6,7 +6,7 @@
     <title>Yamazaki Privilege OS</title>
     <meta
       name="description"
-      content="Professional hospitality loyalty and membership software demo for Yamazaki Hospitality Fleet."
+      content="Entry point for the Yamazaki Hospitality Fleet membership software demo."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,224 +16,144 @@
     />
     <link rel="stylesheet" href="./src/styles.css" />
   </head>
-  <body data-page="home">
-    <div class="app-layout">
-      <aside class="sidebar">
-        <a class="brand-link" href="./index.html">
-          <div class="brand-mark">TM</div>
-          <div>
-            <p class="eyebrow">Restaurant loyalty software</p>
-            <h2>Yamazaki Privilege OS</h2>
-          </div>
-        </a>
+  <body data-page="login">
+    <main class="login-shell">
+      <section class="login-card">
+        <div class="login-brand-panel">
+          <a class="brand-link" href="./index.html">
+            <div class="brand-mark">YP</div>
+            <div>
+              <p class="eyebrow">Hospitality membership software</p>
+              <h2>Yamazaki Privilege OS</h2>
+            </div>
+          </a>
 
-        <nav class="sidebar-nav">
-          <div class="nav-group">
-            <p class="nav-section-title">Overview</p>
-            <div class="nav-links">
-              <a class="nav-link" href="./index.html" data-nav="home"><span>Executive View</span><span>01</span></a>
-              <a class="nav-link" href="./dashboard.html" data-nav="dashboard"><span>Dashboard</span><span>02</span></a>
-            </div>
+          <div class="login-topbar">
+            <span class="status-pill">Live demo environment</span>
+            <span class="login-venture-pill">Yamazaki Hospitality Fleet</span>
           </div>
-          <div class="nav-group">
-            <p class="nav-section-title">Operations</p>
-            <div class="nav-links">
-              <a class="nav-link" href="./customers.html" data-nav="customers"><span>Customers</span><span>CRM</span></a>
-              <a class="nav-link" href="./counter.html" data-nav="counter"><span>Counter</span><span>POS</span></a>
-              <a class="nav-link" href="./branches.html" data-nav="branches"><span>Branches</span><span>Ops</span></a>
-            </div>
-          </div>
-          <div class="nav-group">
-            <p class="nav-section-title">Growth</p>
-            <div class="nav-links">
-              <a class="nav-link" href="./rewards.html" data-nav="rewards"><span>Rewards</span><span>Rules</span></a>
-              <a class="nav-link" href="./campaigns.html" data-nav="campaigns"><span>Campaigns</span><span>ROI</span></a>
-              <a class="nav-link" href="./settings.html" data-nav="settings"><span>Settings</span><span>Policy</span></a>
-            </div>
-          </div>
-        </nav>
 
-        <div class="sidebar-card">
-          <p class="small-label">Why this demo works</p>
-          <strong>Built around Yamazaki Hospitality Fleet, not a generic restaurant chain.</strong>
-          <p>It shows how one membership system can serve fine dine, banquets, catering, kids experiences, and community hospitality under one brand.</p>
-          <div class="sidebar-chip-row">
-            <span class="sidebar-chip">Vegetarian-first</span>
-            <span class="sidebar-chip">Multi-venture membership</span>
+          <p class="section-kicker">Entry Experience</p>
+          <h1>Welcome to the Yamazaki membership control center.</h1>
+          <p>
+            This demo is designed as a premium hospitality software experience for Yamazaki Hospitality Fleet, covering fine dine, celebrations, catering, and lifestyle-led member journeys.
+          </p>
+
+          <ul class="login-points">
+            <li>One shared membership wallet across Yamazaki ventures</li>
+            <li>Lifecycle campaigns for birthdays, anniversaries, and reactivation</li>
+            <li>Counter-safe rewards, OTP redemption, and founder-level controls</li>
+          </ul>
+
+          <div class="login-meta">
+            <div class="login-stat">
+              <strong>18.4k</strong>
+              <span>Members managed</span>
+            </div>
+            <div class="login-stat">
+              <strong>5</strong>
+              <span>Live hospitality ventures</span>
+            </div>
+            <div class="login-stat">
+              <strong>31%</strong>
+              <span>Repeat revenue impact</span>
+            </div>
+          </div>
+
+          <div class="login-showcase">
+            <p class="small-label">What opens next</p>
+            <div class="login-showcase-grid">
+              <div class="login-showcase-card">
+                <strong>Founder Dashboard</strong>
+                <span>Revenue, venture health, and campaign performance</span>
+              </div>
+              <div class="login-showcase-card">
+                <strong>Member CRM</strong>
+                <span>Dining behavior, occasions, and premium segments</span>
+              </div>
+              <div class="login-showcase-card">
+                <strong>Privilege Studio</strong>
+                <span>Benefits, wallet rules, and secure redemption policy</span>
+              </div>
+            </div>
           </div>
         </div>
-      </aside>
 
-      <div class="workspace">
-        <header class="workspace-header">
-          <div class="header-search">Search members, ventures, campaigns, celebrations</div>
-          <div class="header-actions">
-            <div class="header-pill">Demo environment</div>
-            <div class="header-profile">
-              <div class="avatar">SR</div>
-              <div>
-                <strong>Founder Console</strong>
-                <p class="meta-text">Yamazaki Hospitality Fleet</p>
-              </div>
+        <div class="login-form-panel">
+          <div class="login-form-head">
+            <p class="section-kicker">Sign In</p>
+            <h2>Open the demo like a real product.</h2>
+            <p>Use the founder login flow below to enter the Yamazaki Privilege OS demo environment.</p>
+          </div>
+
+          <div class="demo-access-card">
+            <div>
+              <p class="small-label">Recommended Access</p>
+              <strong>Founder / Admin demo</strong>
+            </div>
+            <span class="badge success">Best for presentation</span>
+          </div>
+
+          <form class="login-form" action="./overview.html">
+            <div class="field-group">
+              <label for="email">Work Email</label>
+              <input id="email" name="email" type="email" value="founder@yamazaki.co.in" />
+            </div>
+            <div class="field-group">
+              <label for="role">Workspace Role</label>
+              <select id="role" name="role">
+                <option>Founder / Admin</option>
+                <option>Marketing Manager</option>
+                <option>Outlet Manager</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="venture">Default Venture</label>
+              <select id="venture" name="venture">
+                <option>Yamazaki Hospitality Fleet</option>
+                <option>Yamazaki Pan-Asian Fine Dine</option>
+                <option>Iora Yamazaki</option>
+                <option>Yamazaki Catering</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="otp">Demo Access Code</label>
+              <input id="otp" name="otp" type="text" value="YAM-2026" />
+            </div>
+            <div class="login-helper-row">
+              <span>Workspace status: demo data loaded</span>
+              <span>Last refresh: today</span>
+            </div>
+            <button class="primary-btn login-submit" type="submit">Enter Demo Workspace</button>
+          </form>
+
+          <div class="entry-grid">
+            <div class="entry-tile">
+              <strong>Founder View</strong>
+              <p>Best for client presentation and full product walk-through.</p>
+            </div>
+            <div class="entry-tile">
+              <strong>Operations View</strong>
+              <p>Useful for showing staff, branch, and counter workflows.</p>
+            </div>
+            <div class="entry-tile">
+              <strong>Growth View</strong>
+              <p>Useful for campaigns, CRM, rewards, and member retention.</p>
             </div>
           </div>
-        </header>
 
-        <main class="workspace-main">
-          <section class="page-header">
-            <div class="page-title">
-              <p class="section-kicker">Hospitality Fleet Overview</p>
-              <h1>One membership platform for every Yamazaki experience, from fine dine to banquets and catering.</h1>
-              <p class="muted-copy">
-                Designed around the live Yamazaki brand, this demo shows how one premium vegetarian membership system can unify Pan-Asian dining, Iora celebrations, catering, clubhouse access, and family experiences.
-              </p>
-            </div>
-            <div class="page-actions">
-              <a class="primary-btn" href="./dashboard.html">Open dashboard</a>
-              <a class="secondary-btn" href="./counter.html">View counter flow</a>
-            </div>
-          </section>
+          <div class="login-note">
+            <strong>Presentation tip</strong>
+            <p>Start with Founder View, then move to the dashboard, campaigns, counter workflow, and settings to show the full product story.</p>
+          </div>
 
-          <section class="hero">
-            <article class="hero-card">
-              <div class="hero-copy">
-                <p class="section-kicker">Built for Yamazaki Hospitality Fleet</p>
-                <h2>Premium vegetarian membership, designed for dining and lifestyle loyalty.</h2>
-                <p class="hero-text">
-                  The platform gives Yamazaki a single customer brain across Pan-Asian fine dine, Iora, catering, kids events, and future lifestyle spaces while keeping daily staff operations simple.
-                </p>
-              </div>
-              <div class="cta-row">
-                <a class="primary-btn" href="./rewards.html">Open rewards studio</a>
-                <a class="secondary-btn" href="./campaigns.html">Review campaigns</a>
-              </div>
-              <div class="hero-metrics">
-                <article class="hero-metric">
-                  <strong>18.4k</strong>
-                  <p>Unified member profiles across ventures</p>
-                </article>
-                <article class="hero-metric">
-                  <strong>31%</strong>
-                  <p>Revenue from repeat and celebration guests</p>
-                </article>
-                <article class="hero-metric">
-                  <strong>1,264</strong>
-                  <p>Member benefits redeemed this month</p>
-                </article>
-                <article class="hero-metric">
-                  <strong>932</strong>
-                  <p>Lapsed guests ready for reactivation</p>
-                </article>
-              </div>
-            </article>
-
-            <article class="hero-card hero-visual">
-              <div class="panel-glow"></div>
-              <div class="panel-head">
-                <div>
-                  <p class="panel-label">Leadership snapshot</p>
-                  <h3>What Yamazaki leadership sees immediately</h3>
-                </div>
-                <span class="status-pill">System healthy</span>
-              </div>
-              <div class="mini-list">
-                <div class="mini-list-item">
-                  <strong>Centralized membership rules</strong>
-                  <span class="list-detail">One loyalty and benefits engine with venture-level controls where needed</span>
-                </div>
-                <div class="mini-list-item">
-                  <strong>Venture accountability</strong>
-                  <span class="list-detail">Track member growth, reward usage, and team execution across Pan-Asian, Iora, and catering</span>
-                </div>
-                <div class="mini-list-item">
-                  <strong>Celebration ROI</strong>
-                  <span class="list-detail">See which birthday, family, banquet, and reactivation offers produce real repeat business</span>
-                </div>
-                <div class="mini-list-item">
-                  <strong>Fast rollout</strong>
-                  <span class="list-detail">Phone-number based membership means Yamazaki can launch without waiting for a customer app</span>
-                </div>
-              </div>
-            </article>
-          </section>
-
-          <section class="kpi-grid">
-            <article class="kpi-card emphasis">
-              <p class="panel-label">Brand control</p>
-              <strong>Central</strong>
-              <p class="panel-copy">All Yamazaki ventures follow one premium membership program with clear permissions and policy control.</p>
-            </article>
-            <article class="kpi-card">
-              <p class="panel-label">Member experience</p>
-              <strong>Unified</strong>
-              <p class="panel-copy">Guests can earn at Pan-Asian and use benefits later for Iora, celebrations, or other Yamazaki experiences.</p>
-            </article>
-            <article class="kpi-card">
-              <p class="panel-label">Lifecycle engine</p>
-              <strong>Targeted</strong>
-              <p class="panel-copy">Run offers by venture, family segment, inactivity, birthday, celebration need, or premium spend tier.</p>
-            </article>
-            <article class="kpi-card">
-              <p class="panel-label">Team adoption</p>
-              <strong>Simple</strong>
-              <p class="panel-copy">The member flow is fast enough for busy dining and event-booking environments, so rollout feels credible.</p>
-            </article>
-          </section>
-
-          <section class="feature-grid">
-            <a class="feature-card" href="./dashboard.html">
-              <p class="panel-label">Dashboard</p>
-              <h3>Management reporting that reflects Yamazaki’s real hospitality model.</h3>
-              <p class="panel-copy">KPIs, alerts, campaign calendar, and venture-level revenue signals.</p>
-            </a>
-            <a class="feature-card" href="./customers.html">
-              <p class="panel-label">Customers</p>
-              <h3>A usable member CRM for families, premium diners, and celebration guests.</h3>
-              <p class="panel-copy">VIP flags, visit history, spend signals, occasion tags, and suggested next actions.</p>
-            </a>
-            <a class="feature-card" href="./counter.html">
-              <p class="panel-label">Counter</p>
-              <h3>Shows this is not just a concept deck but an operating tool for Yamazaki teams.</h3>
-              <p class="panel-copy">Staff can search a member, apply benefits, and credit points during billing or event check-in.</p>
-            </a>
-          </section>
-
-          <section class="split-grid">
-            <article class="table-card">
-              <div class="stream-head">
-                <div>
-                  <p class="panel-label">Market-standard capabilities</p>
-                  <h3>Features the Yamazaki brand can credibly offer</h3>
-                </div>
-                <span class="badge">Competitive parity</span>
-              </div>
-              <div class="template-list">
-                <div><strong>No-app phone enrollment</strong><span>Join guests instantly at dining, banquet, or catering touchpoints without app friction</span></div>
-                <div><strong>Cross-venture wallet</strong><span>One benefits wallet across Pan-Asian, Iora, catering, clubhouse, and future experiences</span></div>
-                <div><strong>Automated lifecycle offers</strong><span>Trigger sign-up, birthday, anniversary, milestone, and lapsed-member journeys automatically</span></div>
-                <div><strong>Tiering and gamification</strong><span>Use levels, milestone perks, and progress-driven rewards to lift premium vegetarian loyalty</span></div>
-              </div>
-            </article>
-
-            <article class="table-card">
-              <div class="stream-head">
-                <div>
-                  <p class="panel-label">Why this matters</p>
-                  <h3>Why this fits the live Yamazaki brand</h3>
-                </div>
-                <span class="badge success">Owner-ready story</span>
-              </div>
-              <div class="timeline-stack">
-                <div class="timeline-item"><strong>Vegetarian premium positioning</strong><span>The tone, rewards, and member journeys now match Yamazaki’s “premium vegetarian experiences” message</span></div>
-                <div class="timeline-item"><strong>Hospitality fleet fit</strong><span>The system works not only for dining but also for banquets, catering, family moments, and lifestyle ventures</span></div>
-                <div class="timeline-item"><strong>Control confidence</strong><span>OTP redemption, expiry rules, and venture-safe permissions reduce misuse risk</span></div>
-              </div>
-            </article>
-          </section>
-        </main>
-      </div>
-    </div>
-
-    <script type="module" src="./src/main.js"></script>
+          <div class="login-links">
+            <a href="./overview.html">Skip to overview</a>
+            <a href="./dashboard.html">Open dashboard directly</a>
+            <a href="./health.html">Health check</a>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
