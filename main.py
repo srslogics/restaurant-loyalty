@@ -8,7 +8,7 @@ from typing import Any
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query, Response
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 import psycopg
 from psycopg.rows import dict_row
@@ -225,4 +225,24 @@ def create_feedback(payload: FeedbackIn) -> dict[str, Any]:
     return normalize_feedback_row(row)
 
 
-app.mount("/", StaticFiles(directory=PROJECT_ROOT, html=True), name="static")
+@app.get("/", include_in_schema=False)
+def root() -> FileResponse:
+    return FileResponse(PROJECT_ROOT / "index.html")
+
+
+@app.get("/{full_path:path}", include_in_schema=False)
+def static_files(full_path: str) -> FileResponse:
+    if full_path.startswith("api/"):
+        raise HTTPException(status_code=404, detail="Not found.")
+
+    target = (PROJECT_ROOT / full_path).resolve()
+    try:
+        target.relative_to(PROJECT_ROOT)
+    except ValueError as exc:
+        raise HTTPException(status_code=404, detail="Not found.") from exc
+
+    if target.is_file():
+        return FileResponse(target)
+
+    fallback = PROJECT_ROOT / "index.html"
+    return FileResponse(fallback)
