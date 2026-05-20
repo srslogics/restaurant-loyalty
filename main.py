@@ -6,7 +6,7 @@ import random
 from typing import Any
 
 from dotenv import load_dotenv
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
@@ -100,6 +100,11 @@ def api_health() -> dict[str, Any]:
         raise HTTPException(status_code=500, detail=str(exc)) from exc
 
     return {"ok": True, "database": "connected"}
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+def favicon() -> Response:
+    return Response(status_code=204)
 
 
 @app.get("/api/venues")
