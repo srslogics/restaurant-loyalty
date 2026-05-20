@@ -1,0 +1,51 @@
+VENTURES = [
+    {
+        "slug": "tokii",
+        "name": "Tokii",
+        "tagline": "Treasury of Asian Cuisine",
+        "table_prefix": "TK",
+        "default_table_count": 1,
+    },
+    {
+        "slug": "maharaja-dhaba",
+        "name": "Maharaja Dhaba",
+        "tagline": "Punjabi dining and family meals",
+        "table_prefix": "MD",
+        "default_table_count": 1,
+    },
+    {
+        "slug": "brickhaus",
+        "name": "Brickhaus",
+        "tagline": "Taps n Brews",
+        "table_prefix": "BH",
+        "default_table_count": 1,
+    },
+    {
+        "slug": "spice-theory",
+        "name": "Spice Theory",
+        "tagline": "Fine dining",
+        "table_prefix": "ST",
+        "default_table_count": 1,
+    },
+    {
+        "slug": "yamazaki",
+        "name": "Yamazaki",
+        "tagline": "Signature dining experience",
+        "table_prefix": "YZ",
+        "default_table_count": 1,
+    },
+    {
+        "slug": "yamazaki-catering",
+        "name": "Yamazaki Catering",
+        "tagline": "Events and outdoor catering",
+        "table_prefix": "YC",
+        "default_table_count": 1,
+    },
+    {
+        "slug": "yamazaki-xpress",
+        "name": "Yamazaki Xpress",
+        "tagline": "Fast casual service",
+        "table_prefix": "YX",
+        "default_table_count": 1,
+    },
+]
