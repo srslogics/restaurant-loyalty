@@ -114,14 +114,22 @@ function renderCardSet(venue, basePath, prefixOverride, countOverride) {
 
     card.innerHTML = `
       <div class="qr-card-top">
-        <span class="mini-kicker">Yamazaki Feedback</span>
+        <span class="mini-kicker">Guest Feedback</span>
         <strong>${tableCode}</strong>
       </div>
+      <div class="qr-card-brand">
+        <p>${venue.name}</p>
+        <span>Help us improve your experience</span>
+      </div>
       <div class="qr-target" id="${qrTargetId}"></div>
-      <p>${venue.name}</p>
-      <span>Scan to rate your experience</span>
-      <div class="qr-card-tip">Takes less than 20 seconds. Low ratings can be followed up quickly by the venue team.</div>
-      <code>${url}</code>
+      <div class="qr-card-message">
+        <strong>Scan & share your feedback</strong>
+        <span>Less than 20 seconds</span>
+      </div>
+      <div class="qr-card-tip">Your feedback helps our team improve food, service, and ambience.</div>
+      <div class="qr-card-footer">
+        <span>Powered by Yamazaki Feedback</span>
+      </div>
     `;
 
     packGrid.appendChild(card);
