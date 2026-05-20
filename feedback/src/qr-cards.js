@@ -8,6 +8,12 @@ const tableCountInput = document.querySelector("#tableCount");
 const qrStatus = document.querySelector("#qrStatus");
 const fallbackVenues = window.YamazakiFeedbackVenues || [];
 
+function setStatus(message) {
+  if (qrStatus) {
+    qrStatus.textContent = message;
+  }
+}
+
 function makeBasePath() {
   if (window.location.protocol === "file:") {
     return "./index.html";
@@ -58,14 +64,18 @@ function renderQrNode(target, url) {
     return;
   }
 
-  new QRCode(target, {
-    text: url,
-    width: 128,
-    height: 128,
-    colorDark: "#223126",
-    colorLight: "#ffffff",
-    correctLevel: QRCode.CorrectLevel.H,
-  });
+  try {
+    new QRCode(target, {
+      text: url,
+      width: 128,
+      height: 128,
+      colorDark: "#223126",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H,
+    });
+  } catch (_error) {
+    target.innerHTML = `<div class="qr-fallback-text">QR could not render here. Use the link below on the hosted page.</div>`;
+  }
 }
 
 function renderCardSet(venue, basePath, prefixOverride, countOverride) {
@@ -130,8 +140,12 @@ function renderCards(event) {
   };
 
   qrCardsGrid.innerHTML = "";
-  renderCardSet(venue, makeBasePath(), tablePrefixInput.value, tableCountInput.value);
-  qrStatus.textContent = `Generated ${tableCountInput.value} table cards for ${venue.name}.`;
+  try {
+    renderCardSet(venue, makeBasePath(), tablePrefixInput.value, tableCountInput.value);
+    setStatus(`Generated ${tableCountInput.value} table cards for ${venue.name}.`);
+  } catch (error) {
+    setStatus(`Could not generate cards here. ${error.message || "Try the hosted page."}`);
+  }
 }
 
 async function renderAllVenueCards() {
@@ -139,11 +153,23 @@ async function renderAllVenueCards() {
   const basePath = makeBasePath();
   qrCardsGrid.innerHTML = "";
 
+  let renderedCount = 0;
   venues.forEach((venue) => {
-    renderCardSet(venue, basePath, venue.tablePrefix, venue.defaultTableCount);
+    try {
+      renderCardSet(venue, basePath, venue.tablePrefix, venue.defaultTableCount);
+      renderedCount += 1;
+    } catch (_error) {
+      // Keep rendering the rest so one failure does not kill the whole page.
+    }
   });
 
-  qrStatus.textContent = `Generated QR packs for all ${venues.length} ventures.`;
+  if (renderedCount === venues.length) {
+    setStatus(`Generated QR packs for all ${venues.length} ventures.`);
+  } else if (renderedCount > 0) {
+    setStatus(`Generated ${renderedCount} of ${venues.length} venture packs. Some QR blocks could not render in this browser context.`);
+  } else {
+    setStatus("Could not generate QR cards in this local preview. Please use the hosted Render URL.");
+  }
 }
 
 venueSelect?.addEventListener("change", () => {
@@ -157,7 +183,11 @@ printCardsBtn?.addEventListener("click", () => window.print());
 generateAllBtn?.addEventListener("click", renderAllVenueCards);
 
 (async function init() {
-  const venues = await getAvailableVenues();
-  updateVenueSelect(venues);
-  await renderAllVenueCards();
+  try {
+    const venues = await getAvailableVenues();
+    updateVenueSelect(venues);
+    await renderAllVenueCards();
+  } catch (error) {
+    setStatus(`Could not initialize the QR page. ${error.message || "Try the hosted Render URL."}`);
+  }
 })();
