@@ -290,6 +290,26 @@ select {
   padding: 32px 18px 12px;
 }
 
+.loyalty-prompt {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 18px;
+  border: 1px solid rgba(169, 138, 69, 0.18);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(252, 248, 235, 0.9), rgba(247, 243, 229, 0.84));
+}
+
+.loyalty-prompt h3 {
+  font-family: "Fraunces", serif;
+  font-size: 1.3rem;
+  line-height: 1.12;
+}
+
+.loyalty-prompt p:last-child {
+  color: var(--muted);
+}
+
 .success-mark {
   width: 68px;
   height: 68px;
