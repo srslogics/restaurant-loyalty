@@ -113,22 +113,24 @@ function renderCardSet(venue, basePath, prefixOverride, countOverride) {
     const url = `${basePath}?venue=${encodeURIComponent(venue.slug)}&table=${encodeURIComponent(tableCode)}`;
 
     card.innerHTML = `
+      <div class="qr-card-glow"></div>
       <div class="qr-card-top">
-        <span class="mini-kicker">Guest Feedback</span>
+        <span class="mini-kicker">Guest Experience</span>
         <strong>${tableCode}</strong>
       </div>
       <div class="qr-card-brand">
+        <div class="qr-card-mark">Y</div>
         <p>${venue.name}</p>
-        <span>Help us improve your experience</span>
+        <span>Hospitality feedback</span>
       </div>
       <div class="qr-target" id="${qrTargetId}"></div>
       <div class="qr-card-message">
-        <strong>Scan & share your feedback</strong>
-        <span>Less than 20 seconds</span>
+        <strong>Scan to share your experience</strong>
+        <span>Takes less than 20 seconds</span>
       </div>
-      <div class="qr-card-tip">Your feedback helps our team improve food, service, and ambience.</div>
+      <div class="qr-card-tip">Your feedback helps us refine service, ambience, and every detail of your visit.</div>
       <div class="qr-card-footer">
-        <span>Powered by Yamazaki Feedback</span>
+        <span>Thank you for dining with us</span>
       </div>
     `;
 
