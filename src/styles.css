@@ -994,8 +994,17 @@ p {
   .sidebar {
     position: static;
     height: auto;
+    gap: 14px;
     border-right: 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  .sidebar-card.push-bottom {
+    margin-top: 12px;
+  }
+
+  .sidebar-nav {
+    gap: 14px;
   }
 
   .workspace {
@@ -1012,6 +1021,11 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .login-brand-panel,
+  .login-form-panel {
+    padding: 30px 24px;
+  }
+
   .demo-access-card,
   .login-helper-row {
     flex-direction: column;
@@ -1025,11 +1039,34 @@ p {
     padding-inline: 14px;
   }
 
+  .workspace {
+    padding-bottom: 20px;
+  }
+
+  .workspace-header {
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .page-title h1 {
+    font-size: clamp(1.75rem, 8vw, 2.4rem);
+  }
+
+  .hero-copy h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    max-width: none;
+  }
+
   .hero-metrics,
   .kpi-grid,
   .feature-grid,
   .three-grid,
   .action-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .split-grid,
+  .reward-layout {
     grid-template-columns: 1fr;
   }
 
@@ -1048,8 +1085,66 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .table-toolbar,
+  .stream-head,
+  .panel-head,
+  .brand-link {
+    align-items: flex-start;
+  }
+
+  .table-row.table-head {
+    display: none;
+  }
+
+  .mini-list-item,
+  .activity-list li,
+  .stack-row,
+  .template-list div,
+  .segment-list div,
+  .timeline-item,
+  .detail-row,
+  .bill-line,
+  .table-row {
+    gap: 8px;
+    padding: 13px;
+  }
+
   .login-meta,
   .entry-grid {
     grid-template-columns: 1fr;
+  }
+
+  .login-shell {
+    padding: 14px;
+  }
+
+  .login-card {
+    border-radius: 22px;
+  }
+
+  .login-brand-panel,
+  .login-form-panel {
+    padding: 22px 18px;
+  }
+
+  .login-brand-panel h1 {
+    font-size: clamp(2rem, 10vw, 2.9rem);
+  }
+
+  .login-form-panel h2 {
+    font-size: clamp(1.7rem, 8vw, 2.2rem);
+  }
+
+  .login-topbar,
+  .login-links,
+  .page-actions {
+    gap: 8px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 }

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yamazaki Table Feedback</title>
+    <meta
+      name="description"
+      content="Guest-facing QR feedback form for Yamazaki Hospitality Fleet."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/feedback.css" />
+  </head>
+  <body class="guest-body">
+    <main class="guest-shell">
+      <section class="guest-card">
+        <div class="guest-topbar">
+          <div class="guest-brand">
+            <div class="guest-mark">YP</div>
+            <div>
+              <p class="mini-kicker">Yamazaki Hospitality Fleet</p>
+              <h1>Tell us about your experience</h1>
+            </div>
+          </div>
+          <div class="table-badge" id="tableBadge">Table T01</div>
+        </div>
+
+        <div class="guest-context">
+          <p id="venueLine">Yamazaki Pan-Asian Fine Dine</p>
+          <span id="venueCaption">Your feedback helps us improve food, service, and celebrations.</span>
+          <span id="contextLine">Your feedback helps us improve food, service, and celebrations.</span>
+        </div>
+
+        <form id="feedbackForm" class="feedback-form">
+          <section class="form-section">
+            <div class="section-head">
+              <p class="mini-kicker">Overall Rating</p>
+              <h2>How was your visit today?</h2>
+            </div>
+            <div class="rating-row" id="overallRating">
+              <button type="button" class="rating-chip" data-value="1">1</button>
+              <button type="button" class="rating-chip" data-value="2">2</button>
+              <button type="button" class="rating-chip" data-value="3">3</button>
+              <button type="button" class="rating-chip" data-value="4">4</button>
+              <button type="button" class="rating-chip" data-value="5">5</button>
+            </div>
+            <input type="hidden" id="overallScore" name="overallScore" />
+          </section>
+
+          <section class="form-section">
+            <div class="section-head">
+              <p class="mini-kicker">Experience Areas</p>
+              <h2>Rate the details</h2>
+            </div>
+            <div class="metric-grid">
+              <div class="metric-card" data-metric="food">
+                <strong>Food</strong>
+                <div class="mini-rating">
+                  <button type="button" data-value="1">1</button>
+                  <button type="button" data-value="2">2</button>
+                  <button type="button" data-value="3">3</button>
+                  <button type="button" data-value="4">4</button>
+                  <button type="button" data-value="5">5</button>
+                </div>
+                <input type="hidden" name="food" />
+              </div>
+              <div class="metric-card" data-metric="service">
+                <strong>Service</strong>
+                <div class="mini-rating">
+                  <button type="button" data-value="1">1</button>
+                  <button type="button" data-value="2">2</button>
+                  <button type="button" data-value="3">3</button>
+                  <button type="button" data-value="4">4</button>
+                  <button type="button" data-value="5">5</button>
+                </div>
+                <input type="hidden" name="service" />
+              </div>
+              <div class="metric-card" data-metric="ambience">
+                <strong>Ambience</strong>
+                <div class="mini-rating">
+                  <button type="button" data-value="1">1</button>
+                  <button type="button" data-value="2">2</button>
+                  <button type="button" data-value="3">3</button>
+                  <button type="button" data-value="4">4</button>
+                  <button type="button" data-value="5">5</button>
+                </div>
+                <input type="hidden" name="ambience" />
+              </div>
+              <div class="metric-card" data-metric="cleanliness">
+                <strong>Cleanliness</strong>
+                <div class="mini-rating">
+                  <button type="button" data-value="1">1</button>
+                  <button type="button" data-value="2">2</button>
+                  <button type="button" data-value="3">3</button>
+                  <button type="button" data-value="4">4</button>
+                  <button type="button" data-value="5">5</button>
+                </div>
+                <input type="hidden" name="cleanliness" />
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <div class="section-head">
+              <p class="mini-kicker">Visit Type</p>
+              <h2>What brought you here today?</h2>
+            </div>
+            <div class="chip-grid" id="visitType">
+              <button type="button" class="choice-chip" data-value="Family Dining">Family Dining</button>
+              <button type="button" class="choice-chip" data-value="Date Night">Date Night</button>
+              <button type="button" class="choice-chip" data-value="Business Meal">Business Meal</button>
+              <button type="button" class="choice-chip" data-value="Celebration">Celebration</button>
+              <button type="button" class="choice-chip" data-value="Casual Visit">Casual Visit</button>
+            </div>
+            <input type="hidden" id="visitTypeValue" name="visitType" />
+          </section>
+
+          <section class="form-section">
+            <div class="section-head">
+              <p class="mini-kicker">Quick Highlights</p>
+              <h2>What stood out most?</h2>
+            </div>
+            <div class="chip-grid multi" id="highlights">
+              <button type="button" class="choice-chip" data-value="Presentation">Presentation</button>
+              <button type="button" class="choice-chip" data-value="Taste">Taste</button>
+              <button type="button" class="choice-chip" data-value="Staff Warmth">Staff Warmth</button>
+              <button type="button" class="choice-chip" data-value="Ambience">Ambience</button>
+              <button type="button" class="choice-chip" data-value="Speed">Speed</button>
+              <button type="button" class="choice-chip" data-value="Value for Money">Value for Money</button>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <div class="section-head">
+              <p class="mini-kicker">Comments</p>
+              <h2>Anything we should know?</h2>
+            </div>
+            <textarea
+              id="comments"
+              name="comments"
+              rows="5"
+              placeholder="Tell us what you loved, or what we can improve next time."
+            ></textarea>
+          </section>
+
+          <section class="form-section">
+            <div class="section-head">
+              <p class="mini-kicker">Optional Contact</p>
+              <h2>Can we follow up if needed?</h2>
+            </div>
+            <div class="field-grid">
+              <div class="field-group">
+                <label for="guestName">Name</label>
+                <input id="guestName" name="guestName" type="text" placeholder="Your name" />
+              </div>
+              <div class="field-group">
+                <label for="guestPhone">Phone</label>
+                <input id="guestPhone" name="guestPhone" type="tel" placeholder="+91" />
+              </div>
+            </div>
+          </section>
+
+          <div class="form-actions">
+            <p id="formMessage" class="form-message" aria-live="polite"></p>
+            <button class="submit-btn" type="submit">Submit Feedback</button>
+          </div>
+        </form>
+
+        <section id="successPanel" class="success-panel" hidden>
+          <div class="success-mark">✓</div>
+          <h2>Thank you for your feedback</h2>
+          <p>Your response has been shared with the Yamazaki team.</p>
+          <p id="referenceLine"></p>
+          <button id="newFeedbackBtn" class="secondary-guest-btn" type="button">Submit another response</button>
+        </section>
+      </section>
+    </main>
+
+    <script src="./src/venues.js"></script>
+    <script src="./src/api.js"></script>
+    <script src="./src/feedback.js"></script>
+  </body>
+</html>

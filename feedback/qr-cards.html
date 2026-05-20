@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Cards | Yamazaki Feedback</title>
+    <meta
+      name="description"
+      content="Generate printable QR code table cards for Yamazaki feedback collection."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/feedback.css" />
+  </head>
+  <body class="manager-body">
+    <div class="manager-layout">
+      <aside class="manager-sidebar">
+        <div class="guest-brand">
+          <div class="guest-mark">YP</div>
+          <div>
+            <p class="mini-kicker">Yamazaki Feedback</p>
+            <h1>QR Card Builder</h1>
+          </div>
+        </div>
+        <div class="sidebar-section">
+          <a class="manager-link" href="./manage.html">Feedback Inbox</a>
+          <a class="manager-link active" href="./qr-cards.html">QR Cards</a>
+          <a class="manager-link" href="../dashboard.html">Main App</a>
+        </div>
+        <div class="sidebar-note">
+          <strong>Print-ready</strong>
+          <p>Create table QR cards that open the guest feedback form with the right venture and table preselected.</p>
+        </div>
+      </aside>
+
+      <main class="manager-main">
+        <header class="manager-header">
+          <div>
+            <p class="mini-kicker">QR Generator</p>
+            <h2>Create print-ready feedback cards</h2>
+            <p id="qrStatus" class="manager-status">Loading live venture setup...</p>
+          </div>
+          <div class="manager-actions">
+            <button id="generateAllBtn" class="secondary-guest-btn" type="button">Generate All Venture Packs</button>
+            <button id="printCardsBtn" class="secondary-guest-btn" type="button">Print Cards</button>
+          </div>
+        </header>
+
+        <section class="manager-card">
+          <div class="qr-hero">
+            <div class="qr-hero-copy">
+              <p class="mini-kicker">Current Rollout</p>
+              <h3>One table card per venture, ready to place and test.</h3>
+              <p>
+                Every card opens the guest feedback form for the correct venture and table code. Once final table counts arrive, we can expand each venue pack without changing the guest flow.
+              </p>
+            </div>
+            <div class="qr-hero-stats">
+              <div class="qr-hero-stat">
+                <strong>7</strong>
+                <span>Ventures seeded</span>
+              </div>
+              <div class="qr-hero-stat">
+                <strong>1</strong>
+                <span>Table each for now</span>
+              </div>
+              <div class="qr-hero-stat">
+                <strong>QR</strong>
+                <span>Live feedback links</span>
+              </div>
+            </div>
+          </div>
+
+          <form id="qrForm" class="qr-form">
+            <div class="field-group compact">
+              <label for="qrVenue">Venue</label>
+              <select id="qrVenue" name="qrVenue">
+                <option value="">Loading ventures...</option>
+              </select>
+            </div>
+            <div class="field-group compact">
+              <label for="tablePrefix">Table Prefix</label>
+              <input id="tablePrefix" name="tablePrefix" type="text" value="T" />
+            </div>
+            <div class="field-group compact">
+              <label for="tableCount">Number of Tables</label>
+              <input id="tableCount" name="tableCount" type="number" min="1" max="60" value="12" />
+            </div>
+            <button class="submit-btn compact-btn" type="submit">Generate QR Cards</button>
+          </form>
+        </section>
+
+        <section id="qrCardsGrid" class="qr-cards-grid"></section>
+      </main>
+    </div>
+
+    <script src="./src/venues.js"></script>
+    <script src="./src/api.js"></script>
+    <script src="./vendor/qrcode.min.js"></script>
+    <script src="./src/qr-cards.js"></script>
+  </body>
+</html>

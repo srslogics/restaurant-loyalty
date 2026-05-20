@@ -1,0 +1,17 @@
+{
+  "name": "yamazaki-privilege-os",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Yamazaki Hospitality Fleet membership and QR feedback system",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "db:setup": "node scripts/setup-db.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "pg": "^8.16.3"
+  }
+}

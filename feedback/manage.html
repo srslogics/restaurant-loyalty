@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Manager | Yamazaki</title>
+    <meta
+      name="description"
+      content="Manager view for Yamazaki table feedback responses."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/feedback.css" />
+  </head>
+  <body class="manager-body">
+    <div class="manager-layout">
+      <aside class="manager-sidebar">
+        <div class="guest-brand">
+          <div class="guest-mark">YP</div>
+          <div>
+            <p class="mini-kicker">Yamazaki Feedback</p>
+            <h1>Manager Console</h1>
+          </div>
+        </div>
+        <div class="sidebar-section">
+          <a class="manager-link active" href="./manage.html">Feedback Inbox</a>
+          <a class="manager-link" href="./qr-cards.html">QR Cards</a>
+          <a class="manager-link" href="../dashboard.html">Main App</a>
+        </div>
+        <div class="sidebar-note">
+          <strong>Real-use mode</strong>
+          <p>Reads live responses from the database so each venture can track service recovery in one place.</p>
+        </div>
+      </aside>
+
+      <main class="manager-main">
+        <header class="manager-header">
+          <div>
+            <p class="mini-kicker">Feedback Inbox</p>
+            <h2>Review live table feedback</h2>
+            <p id="statusNote" class="manager-status">Loading live responses...</p>
+          </div>
+          <div class="manager-actions">
+            <button id="exportCsvBtn" class="secondary-guest-btn" type="button">Export CSV</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <article class="stat-panel">
+            <span>Total responses</span>
+            <strong id="totalResponses">0</strong>
+          </article>
+          <article class="stat-panel">
+            <span>Average overall</span>
+            <strong id="avgOverall">0.0</strong>
+          </article>
+          <article class="stat-panel">
+            <span>Low-score alerts</span>
+            <strong id="lowScoreCount">0</strong>
+          </article>
+          <article class="stat-panel">
+            <span>Most active table</span>
+            <strong id="topTable">-</strong>
+          </article>
+        </section>
+
+        <section class="manager-card">
+          <div class="filter-row">
+            <div class="field-group compact">
+              <label for="venueFilter">Venue</label>
+              <select id="venueFilter">
+                <option value="all">All ventures</option>
+              </select>
+            </div>
+            <div class="field-group compact">
+              <label for="ratingFilter">Rating</label>
+              <select id="ratingFilter">
+                <option value="all">All scores</option>
+                <option value="low">1-2 only</option>
+                <option value="mid">3 only</option>
+                <option value="high">4-5 only</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section id="feedbackList" class="feedback-list"></section>
+        <section id="emptyState" class="empty-state" hidden>
+          <h3>No feedback yet</h3>
+          <p>Responses from QR code tables will appear here.</p>
+        </section>
+      </main>
+    </div>
+
+    <script src="./src/venues.js"></script>
+    <script src="./src/api.js"></script>
+    <script src="./src/manage.js"></script>
+  </body>
+</html>
