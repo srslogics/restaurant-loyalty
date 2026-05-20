@@ -6,16 +6,34 @@ const venueSelect = document.querySelector("#qrVenue");
 const tablePrefixInput = document.querySelector("#tablePrefix");
 const tableCountInput = document.querySelector("#tableCount");
 const qrStatus = document.querySelector("#qrStatus");
+const fallbackVenues = window.YamazakiFeedbackVenues || [];
 
-function makeOrigin() {
-  if (window.location.origin && window.location.origin !== "null") {
-    return window.location.origin;
+function makeBasePath() {
+  if (window.location.protocol === "file:") {
+    return "./index.html";
   }
-  return "";
+
+  if (window.location.origin && window.location.origin !== "null") {
+    return `${window.location.origin}/feedback/index.html`;
+  }
+
+  return "/feedback/index.html";
 }
 
-async function loadVenues() {
-  const venues = await window.YamazakiFeedbackApi.getVenues();
+async function getAvailableVenues() {
+  try {
+    const venues = await window.YamazakiFeedbackApi.getVenues();
+    if (Array.isArray(venues) && venues.length) {
+      return venues;
+    }
+  } catch (_error) {
+    // Ignore and fall back to seeded venue list.
+  }
+
+  return fallbackVenues;
+}
+
+function updateVenueSelect(venues) {
   venueSelect.innerHTML = venues
     .map(
       (venue) =>
@@ -30,8 +48,27 @@ async function loadVenues() {
   }
 }
 
-function renderCardSet(venue, origin, prefixOverride, countOverride) {
-  const basePath = `${origin}/feedback/index.html`;
+function hasQRCodeLibrary() {
+  return typeof window.QRCode === "function";
+}
+
+function renderQrNode(target, url) {
+  if (!hasQRCodeLibrary()) {
+    target.innerHTML = `<div class="qr-fallback-text">QR library unavailable</div>`;
+    return;
+  }
+
+  new QRCode(target, {
+    text: url,
+    width: 128,
+    height: 128,
+    colorDark: "#223126",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H,
+  });
+}
+
+function renderCardSet(venue, basePath, prefixOverride, countOverride) {
   const tablePrefix = prefixOverride || venue.tablePrefix || "T";
   const tableCount = Number(countOverride || venue.defaultTableCount || 0);
 
@@ -69,14 +106,7 @@ function renderCardSet(venue, origin, prefixOverride, countOverride) {
     `;
 
     packGrid.appendChild(card);
-    new QRCode(document.getElementById(qrTargetId), {
-      text: url,
-      width: 128,
-      height: 128,
-      colorDark: "#223126",
-      colorLight: "#ffffff",
-      correctLevel: QRCode.CorrectLevel.H,
-    });
+    renderQrNode(document.getElementById(qrTargetId), url);
   }
 
   qrCardsGrid.appendChild(section);
@@ -100,17 +130,17 @@ function renderCards(event) {
   };
 
   qrCardsGrid.innerHTML = "";
-  renderCardSet(venue, makeOrigin(), tablePrefixInput.value, tableCountInput.value);
+  renderCardSet(venue, makeBasePath(), tablePrefixInput.value, tableCountInput.value);
   qrStatus.textContent = `Generated ${tableCountInput.value} table cards for ${venue.name}.`;
 }
 
 async function renderAllVenueCards() {
-  const venues = await window.YamazakiFeedbackApi.getVenues();
-  const origin = makeOrigin();
+  const venues = await getAvailableVenues();
+  const basePath = makeBasePath();
   qrCardsGrid.innerHTML = "";
 
   venues.forEach((venue) => {
-    renderCardSet(venue, origin, venue.tablePrefix, venue.defaultTableCount);
+    renderCardSet(venue, basePath, venue.tablePrefix, venue.defaultTableCount);
   });
 
   qrStatus.textContent = `Generated QR packs for all ${venues.length} ventures.`;
@@ -126,4 +156,8 @@ qrForm?.addEventListener("submit", renderCards);
 printCardsBtn?.addEventListener("click", () => window.print());
 generateAllBtn?.addEventListener("click", renderAllVenueCards);
 
-loadVenues().then(renderAllVenueCards);
+(async function init() {
+  const venues = await getAvailableVenues();
+  updateVenueSelect(venues);
+  await renderAllVenueCards();
+})();

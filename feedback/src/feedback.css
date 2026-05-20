@@ -546,6 +546,13 @@ select {
   background: white;
 }
 
+.qr-fallback-text {
+  padding: 24px 12px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .qr-card strong {
   font-size: 1.08rem;
 }
