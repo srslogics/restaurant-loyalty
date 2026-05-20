@@ -553,6 +553,17 @@ select {
   font-size: 0.9rem;
 }
 
+.qr-fallback-link {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.qr-fallback-link a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
 .qr-card strong {
   font-size: 1.08rem;
 }

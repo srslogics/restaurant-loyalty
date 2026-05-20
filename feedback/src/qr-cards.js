@@ -59,9 +59,13 @@ function hasQRCodeLibrary() {
 }
 
 function renderQrNode(target, url) {
+  if (!target) {
+    return false;
+  }
+
   if (!hasQRCodeLibrary()) {
     target.innerHTML = `<div class="qr-fallback-text">QR library unavailable</div>`;
-    return;
+    return false;
   }
 
   try {
@@ -73,8 +77,10 @@ function renderQrNode(target, url) {
       colorLight: "#ffffff",
       correctLevel: QRCode.CorrectLevel.H,
     });
+    return true;
   } catch (_error) {
     target.innerHTML = `<div class="qr-fallback-text">QR could not render here. Use the link below on the hosted page.</div>`;
+    return false;
   }
 }
 
@@ -95,6 +101,9 @@ function renderCardSet(venue, basePath, prefixOverride, countOverride) {
     <div class="qr-pack-grid"></div>
   `;
   const packGrid = section.querySelector(".qr-pack-grid");
+  if (!packGrid) {
+    throw new Error("QR card layout could not initialize.");
+  }
 
   for (let index = 1; index <= tableCount; index += 1) {
     const tableCode = `${tablePrefix}${String(index).padStart(2, "0")}`;
@@ -116,7 +125,14 @@ function renderCardSet(venue, basePath, prefixOverride, countOverride) {
     `;
 
     packGrid.appendChild(card);
-    renderQrNode(document.getElementById(qrTargetId), url);
+    const qrTarget = card.querySelector(`#${CSS.escape(qrTargetId)}`);
+    const rendered = renderQrNode(qrTarget, url);
+    if (!rendered && qrTarget) {
+      qrTarget.insertAdjacentHTML(
+        "beforeend",
+        `<div class="qr-fallback-link"><a href="${url}" target="_blank" rel="noreferrer">Open feedback link</a></div>`,
+      );
+    }
   }
 
   qrCardsGrid.appendChild(section);
