@@ -86,7 +86,7 @@ def normalize_feedback_row(row: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-@app.get("/api/health")
+@app.api_route("/api/health", methods=["GET", "HEAD"])
 def api_health() -> dict[str, Any]:
     if not DATABASE_URL:
         return {"ok": True, "database": "not-configured"}
