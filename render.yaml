@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: restaurant-feedback
+    env: python
+    plan: free
+    autoDeploy: true
+    rootDir: .
+    buildCommand: pip install -r requirements.txt
+    startCommand: sh -c 'python3 scripts/setup_db.py && uvicorn main:app --host 0.0.0.0 --port $PORT'
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        sync: false

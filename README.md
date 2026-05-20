@@ -30,6 +30,22 @@ Multi-page product app for Yamazaki Hospitality Fleet's loyalty, membership, and
 
 Open `http://127.0.0.1:4173/` for the membership product, or `http://127.0.0.1:4173/feedback/index.html?venue=tokii&table=TK01` for the guest feedback form.
 
+## Render Deploy
+
+This repo is now Render-compatible as a Python web service.
+
+- Blueprint file: `render.yaml`
+- Python version pin: `runtime.txt`
+- Build command: `pip install -r requirements.txt`
+- Start command: `python3 scripts/setup_db.py && uvicorn main:app --host 0.0.0.0 --port $PORT`
+- Health check: `/api/health`
+
+Set only one required environment variable on Render:
+
+- `DATABASE_URL`
+
+If you deploy through the Render dashboard manually, use the same build and start commands above.
+
 ## Live QR Ventures
 
 - Tokii
